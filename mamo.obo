@@ -1,0 +1,941 @@
+format-version: 1.2
+data-version: releases/2026-03-31
+idspace: mamo http://identifiers.org/mamo# 
+idspace: skos http://www.w3.org/2004/02/skos/core# 
+ontology: mamo
+property_value: owl:versionInfo "2023-02-03" xsd:dateTime
+property_value: owl:versionInfo "2026-03-31" xsd:string
+
+[Term]
+id: MAMO:0000003
+is_a: MAMO:0000037
+property_value: seeAlso "http://en.wikipedia.org/wiki/Mathematical_model" xsd:anyURI
+property_value: skos:definition "Description of a system using mathematical concepts and language.  The model is composed of a set of variables and a set of equations that establish relationships between the variables. " xsd:string
+property_value: skos:example "A set of ordinary differential equation describing a physical process." xsd:string
+property_value: skos:prefLabel "mathematical model" xsd:string
+
+[Term]
+id: MAMO:0000004
+is_a: MAMO:0000003
+relationship: mamo:hasFeature MAMO:0000058
+property_value: seeAlso "http://en.wikipedia.org/wiki/Statistical_model" xsd:anyURI
+property_value: skos:definition "Model that describes how one or more random variables are related to one or more random variables." xsd:string
+property_value: skos:example "The relationship between the size and the age." xsd:string
+property_value: skos:prefLabel "statistical model" xsd:string
+
+[Term]
+id: MAMO:0000008
+is_a: MAMO:0000003
+relationship: mamo:hasFeature MAMO:0000056
+property_value: seeAlso "http://en.wikipedia.org/wiki/Steady_state_%28chemistry%29" xsd:anyURI
+property_value: skos:definition "Model which describes a system where the state variable values do not vary." xsd:string
+property_value: skos:prefLabel "steady-state model" xsd:string
+
+[Term]
+id: MAMO:0000009
+comment: Can be analysed using flux balance analysis [http://identifiers.org/biomodels.kisao/KISAO_0000437].
+is_a: MAMO:0000008
+relationship: mamo:hasFeature MAMO:0000058
+property_value: seeAlso "http://identifiers.org/pubmed/12700248" xsd:anyURI {comment="Reed JL, Palsson BO (2003) Thirteen years of building constraint-based in silico models of Escherichia coli. J Bacteriol, 185(9):2692-9.\n"}
+property_value: skos:definition "The constraint-based modeling procedure does not strive to find a single solution but rather finds a collection of all allowable solutions to the governing equations that can be defined (a solution space). The subsequent application of additional constraints further reduces the solution space and, consequently, reduces the number of allowable solutions that a cell can utilize." xsd:string
+property_value: skos:prefLabel "constraint-based model" xsd:string
+
+[Term]
+id: MAMO:0000010
+disjoint_from: MAMO:0000027
+property_value: seeAlso "http://en.wikipedia.org/wiki/Variable_%28mathematics%29" xsd:anyURI
+property_value: skos:definition "Value that may change within the scope of a given model or set of operations." xsd:string
+property_value: skos:prefLabel "variable" xsd:string
+
+[Term]
+id: MAMO:0000017
+comment: Synonyms: input variable
+is_a: MAMO:0000010
+disjoint_from: MAMO:0000018
+property_value: seeAlso "https://en.wikipedia.org/wiki/Dependent_and_independent_variables;" xsd:anyURI
+property_value: seeAlso "https://www.ncsu.edu/labwrite/po/independentvar.htm" xsd:anyURI
+property_value: skos:definition "variable which is controlled in an experiment, and that affects other variables during the experiment. An independent variable does not depend on other variables of the model." xsd:string
+property_value: skos:prefLabel "independent variable" xsd:string
+
+[Term]
+id: MAMO:0000018
+comment: Synonyms: output variable
+is_a: MAMO:0000010
+property_value: seeAlso "https://en.wikipedia.org/wiki/Dependent_and_independent_variables;" xsd:anyURI
+property_value: seeAlso "https://www.ncsu.edu/labwrite/po/dependentvar.htm" xsd:anyURI
+property_value: skos:definition "variable which is measured in an experiment, and that is affected during the experiment. A dependent variable depends on other variables" xsd:string
+property_value: skos:example "Example: in an experiment one controls x and measure y, with a relationship y = ax+b, y is depending on x." xsd:string
+property_value: skos:prefLabel "dependent variable" xsd:string
+
+[Term]
+id: MAMO:0000019
+is_a: MAMO:0000181
+disjoint_from: MAMO:0000020
+relationship: mamo:hasFeature MAMO:0000058
+property_value: seeAlso "https://en.wikipedia.org/wiki/Pharmacokinetics" xsd:anyURI
+property_value: skos:altLabel "pharmacokinetics model" xsd:string
+property_value: skos:definition "Model dedicated to the determination of the fate of substances administered externally to a living organism. Pharmacokinetics models are divided into several areas including the extent and rate of absorption, distribution, metabolism and excretion (ADME) to which Liberation is sometimes added (LADME)." xsd:string
+property_value: skos:prefLabel "pharmacokinetic model" xsd:string
+
+[Term]
+id: MAMO:0000020
+is_a: MAMO:0000181
+relationship: mamo:hasFeature MAMO:0000058
+property_value: seeAlso "https://en.wikipedia.org/wiki/Pharmacodynamics" xsd:anyURI
+property_value: skos:altLabel "pharmacodynamics model" xsd:string
+property_value: skos:definition "Models dedicated to the study of the biochemical and physiological effects of drugs on the body or on microorganisms or parasites within or on the body and the mechanisms of drug action and the relationship between drug concentration and effect." xsd:string
+property_value: skos:prefLabel "pharmacodynamic model" xsd:string
+
+[Term]
+id: MAMO:0000021
+is_a: MAMO:0000180
+relationship: mamo:hasFeature MAMO:0000058
+property_value: seeAlso "http://en.wikipedia.org/wiki/Multiphysics" xsd:anyURI
+property_value: skos:definition "Multiphysics treats simulations that involve multiple physical models or multiple simultaneous physical phenomena. For example, combining chemical kinetics and fluid mechanics or combining finite elements with molecular dynamics. Multiphysics typically involves solving coupled systems of partial differential equations." xsd:string
+property_value: skos:prefLabel "multiphysics model" xsd:string
+
+[Term]
+id: MAMO:0000022
+comment: Rule-based modeling is especially effective in cases where the rule-set is significantly simpler than the model it implies, meaning that the model is a repeated manifestation of a limited number of patterns. 
+is_a: MAMO:0000003
+relationship: mamo:hasFeature MAMO:0000064
+property_value: seeAlso "http://en.wikipedia.org/wiki/Rule-based_modeling#For_biochemical_systems" xsd:anyURI
+property_value: skos:definition "Model that uses a set of rules used to describe other model instances. The rule-set can be used to create a model, or suitable tools can use a rule-set in place of a model. " xsd:string
+property_value: skos:prefLabel "rule-based model" xsd:string
+
+[Term]
+id: MAMO:0000023
+is_a: MAMO:0000003
+property_value: seeAlso "http://en.wikipedia.org/wiki/Computational_model" xsd:anyURI
+property_value: skos:definition "mathematical model that requires computer simulations to study the behavior of a complex system. The system under study is often a complex nonlinear system for which simple, intuitive analytical solutions are not readily available. Rather than deriving a mathematical analytical solution to the problem, experimentation with the model is done by adjusting the parameters of the system in the computer, and studying the differences in the outcome of the experiments. " xsd:string
+property_value: skos:example "weather forecasting models, earth simulator models, flight simulator models, molecular protein folding models, neural network models." xsd:string
+property_value: skos:prefLabel "computational model" xsd:string
+
+[Term]
+id: MAMO:0000024
+comment: Synonym: multi-agent model
+is_a: MAMO:0000023
+relationship: mamo:hasFeature MAMO:0000059
+relationship: mamo:hasFeature MAMO:0000064
+property_value: seeAlso "http://en.wikipedia.org/wiki/Agent-based_model" xsd:anyURI
+property_value: skos:definition "model simulating the actions and interactions of autonomous agents (both individual or collective entities such as organizations or groups) with a view to assessing their effects on the system as a whole" xsd:string
+property_value: skos:prefLabel "agent-based model" xsd:string
+
+[Term]
+id: MAMO:0000025
+is_a: MAMO:0000003
+relationship: mamo:hasFeature MAMO:0000057
+property_value: seeAlso "http://en.wikipedia.org/wiki/Petri_net" xsd:anyURI
+property_value: skos:definition "directed bipartite graph, in which the nodes represent transitions (i.e. events that may occur, signified by bars) and places (i.e. conditions, signified by circles). The directed arcs describe which places are pre- and/or postconditions for which transitions (signified by arrows) occurs." xsd:string
+property_value: skos:prefLabel "Petri net" xsd:string
+
+[Term]
+id: MAMO:0000026
+is_a: MAMO:0000180
+relationship: mamo:hasFeature MAMO:0000056
+property_value: seeAlso "http://en.wikipedia.org/wiki/Computational_neuroscience" xsd:anyURI
+property_value: skos:definition "Computational Neuroscience emphasizes descriptions of functional and biologically realistic neurons (and neural systems) and their physiology and dynamics. These models capture the essential features of the biological system at multiple spatial-temporal scales, from membrane currents, protein, and chemical coupling to network oscillations, columnar and topographic architecture, and learning and memory. These computational models are used to frame hypotheses that can be directly tested by current or future biological and/or psychological experiments." xsd:string
+property_value: skos:prefLabel "computational Neuroscience model" xsd:string
+
+[Term]
+id: MAMO:0000027
+property_value: skos:definition "information obtained about a system by the application of an analysis procedure to a model of this system" xsd:string
+property_value: skos:example "timecourse of a concentation; EC50" xsd:string
+property_value: skos:prefLabel "readout" xsd:string
+
+[Term]
+id: MAMO:0000028
+is_a: MAMO:0000003
+relationship: mamo:hasFeature MAMO:0000058
+property_value: seeAlso "http://en.wikipedia.org/wiki/Population_models" xsd:anyURI
+property_value: skos:definition "type of mathematical model that is applied to the study of population dynamics. " xsd:string
+property_value: skos:prefLabel "population model" xsd:string
+
+[Term]
+id: MAMO:0000029
+is_a: MAMO:0000028
+property_value: seeAlso "http://en.wikipedia.org/wiki/Matrix_population_models" xsd:anyURI
+property_value: skos:definition "specific type of population model that uses matrix algebra. Matrix algebra, in turn, is simply a form of algebraic shorthand for summarizing a larger number of often repetitious and tedious algebraic computations." xsd:string
+property_value: skos:prefLabel "matrix population model" xsd:string
+
+[Term]
+id: MAMO:0000030
+is_a: MAMO:0000003
+property_value: seeAlso "http://en.wikipedia.org/wiki/Algebraic_logic" xsd:anyURI
+property_value: skos:altLabel "algebraic logic model" xsd:string
+property_value: skos:altLabel "logic model" xsd:string
+property_value: skos:definition "model where the discrete values of variables (also called levels) is determined by logical combinations of the values of other variables." xsd:string
+property_value: skos:prefLabel "logical model" xsd:string
+
+[Term]
+id: MAMO:0000031
+is_a: MAMO:0000027
+property_value: skos:definition "evolution of a variable value over time" xsd:string
+property_value: skos:prefLabel "timecourse" xsd:string
+
+[Term]
+id: MAMO:0000032
+is_a: MAMO:0000054
+property_value: skos:definition "model which take into account the spatial distribution or geometric characteristics of the entities described by its variables." xsd:string
+property_value: skos:prefLabel "spatial characteristic" xsd:string
+
+[Term]
+id: MAMO:0000033
+is_a: MAMO:0000180
+relationship: mamo:hasFeature MAMO:0000056
+property_value: seeAlso "http://en.wikipedia.org/wiki/Reaction_diffusion_model" xsd:anyURI
+property_value: skos:definition "mathematical model which explains how the concentration of one or more substances distributed in space changes under the influence of two processes: local chemical reactions in which the substances are transformed into each other, and diffusion which causes the substances to spread out over a domain in space." xsd:string
+property_value: skos:prefLabel "chemical reaction diffusion model" xsd:string
+
+[Term]
+id: MAMO:0000034
+is_a: MAMO:0000033
+property_value: seeAlso "http://en.wikipedia.org/wiki/Finite_Element_Method" xsd:anyURI
+property_value: skos:definition "model where the space is split into a number of subspaces (sometimes called voxels) that are each considered homegenous and isotropic." xsd:string
+property_value: skos:prefLabel "finite element spatial model" xsd:string
+
+[Term]
+id: MAMO:0000035
+is_a: MAMO:0000180
+property_value: skos:definition "model based on a network of nodes or vertices, linked by edges or arcs. nodes can be physical entities, processes, events or logic operators. Edges can represent fluxs, interactions, influences etc." xsd:string
+property_value: skos:prefLabel "network model" xsd:string
+
+[Term]
+id: MAMO:0000036
+is_a: MAMO:0000035
+property_value: seeAlso "http://en.wikipedia.org/wiki/Biochemical_system" xsd:anyURI
+property_value: skos:definition "Biochemical network studies chemical processes within and relating to, living organisms." xsd:string
+property_value: skos:prefLabel "biochemical network" xsd:string
+
+[Term]
+id: MAMO:0000037
+property_value: skos:altLabel "model" xsd:string
+property_value: skos:definition "Purposeful simplification of reality, designed to imitate certain phenomena or characteristics of a system while downplaying non-essential aspects. Its value lies in the ability to generalise insights from the model to a broader class of systems." xsd:string
+property_value: skos:prefLabel "model" xsd:string
+
+[Term]
+id: MAMO:0000038
+is_a: MAMO:0000036
+disjoint_from: MAMO:0000039
+property_value: seeAlso "http://identifiers.org/pubmed/19897097" xsd:anyURI {comment="Albert R, Wang R (2009) Discrete dynamic modeling of cellular signaling networks. Methods Enzymol 467:281–306"}
+property_value: skos:definition "Signal transduction is a process for cellular communication where the cell receives (and responds to) external stimuli from other cells and from the environment." xsd:string
+property_value: skos:prefLabel "signalling network" xsd:string
+
+[Term]
+id: MAMO:0000039
+is_a: MAMO:0000036
+property_value: seeAlso "http://identifiers.org/pubmed/17903290" xsd:anyURI {comment="Schlitt T, Brazma A (2007) Current approaches to gene regulatory network modelling. BMC Bioinf 8(Suppl 6):S9"}
+property_value: skos:definition "Gene regulation controls the expression of genes and, consequently, all cellular functions. Gene expression is a process that involves transcription of the gene into mRNA, followed by translation to a protein, which may be subject to post-translational modification. The transcription process is controlled by transcription factors (TFs) that can work as activators or inhibitors. TFs are themselves encoded by genes and subject to regulation, which altogether forms complex regulatory networks." xsd:string
+property_value: skos:prefLabel "gene regulatory network" xsd:string
+
+[Term]
+id: MAMO:0000040
+is_a: MAMO:0000036
+property_value: seeAlso "http://identifiers.org/isbn/9780521859035" xsd:anyURI {comment="Palsson B (2006) Systems Biology: Properties of Reconstructed Networks.\nCambridge University Press"}
+property_value: skos:definition "Metabolism is a mechanism composed by a set of biochemical reactions, by which the cell sustains its growth and energy requirements. It includes several catabolic and anabolic pathways of enzyme-catalyzed reactions that import substrates from the environment and transform them into energy and building blocks required to build the cellular components. Metabolic pathways are interconnected through intermediate metabolites, forming complex networks." xsd:string
+property_value: skos:prefLabel "metabolic network" xsd:string
+
+[Term]
+id: MAMO:0000041
+is_a: MAMO:0000003
+relationship: mamo:hasFeature MAMO:0000064
+relationship: mamo:isUsedToModel MAMO:0000038
+relationship: mamo:isUsedToModel MAMO:0000039
+property_value: seeAlso "http://en.wikipedia.org/wiki/Bayesian_network" xsd:anyURI
+property_value: skos:altLabel "Bayes model" xsd:string
+property_value: skos:altLabel "Bayes network" xsd:string
+property_value: skos:altLabel "Bayesian network" xsd:string
+property_value: skos:altLabel "belief network" xsd:string
+property_value: skos:altLabel "probabilistic DAG model" xsd:string
+property_value: skos:altLabel "probabilistic directed acyclic graphical model" xsd:string
+property_value: skos:definition "Bayesian networks are a special type of probabilistic graphs. Their nodes represent random variables (discrete or continuous) and the edges represent conditional dependencies, forming a directed acyclic graph. Each node contains a probabilistic function that is dependent on the values of its input nodes." xsd:string
+property_value: skos:prefLabel "Bayesian model" xsd:string
+
+[Term]
+id: MAMO:0000043
+is_a: MAMO:0000041
+relationship: mamo:hasFeature MAMO:0000056
+property_value: seeAlso "http://identifiers.org/pubmed/15308537" xsd:anyURI {comment="Zou M, Conzen S (2005) A new dynamic Bayesian network (DBN) approach for identifying gene regulatory networks from time course microarray data. Bioinformatics 21(1):71–79"}
+property_value: skos:altLabel "dynamic Bayes model" xsd:string
+property_value: skos:altLabel "dynamic Bayes network" xsd:string
+property_value: skos:altLabel "dynamic Bayesian network" xsd:string
+property_value: skos:altLabel "dynamic belief network" xsd:string
+property_value: skos:altLabel "dynamic probabilistic DAG model" xsd:string
+property_value: skos:altLabel "dynamic probabilistic directed acyclic graphical model" xsd:string
+property_value: skos:definition "A dynamic Bayesian network is a Bayesian network that overcomes the inability to model feedback loops. In this case, the variables are replicated for each time step and the feedback is modeled by connecting the nodes at adjacent time steps." xsd:string
+property_value: skos:prefLabel "dynamic Bayesian model" xsd:string
+
+[Term]
+id: MAMO:0000044
+is_a: MAMO:0000003
+relationship: mamo:hasFeature MAMO:0000064
+property_value: seeAlso "http://en.wikipedia.org/wiki/Process_calculus" xsd:anyURI
+property_value: skos:altLabel "process calculus" xsd:string
+property_value: skos:definition "Process algebras are a family of formal languages for modeling concurrent systems. They generally consist on a set of process primitives, operators for sequential and parallel composition of processes, and communication channels." xsd:string
+property_value: skos:prefLabel "process algebra" xsd:string
+
+[Term]
+id: MAMO:0000045
+is_a: MAMO:0000003
+relationship: mamo:hasFeature MAMO:0000060
+relationship: mamo:isUsedToModel MAMO:0000038
+relationship: mamo:isUsedToModel MAMO:0000039
+relationship: mamo:isUsedToModel MAMO:0000040
+property_value: seeAlso "http://en.wikipedia.org/wiki/Differential_equation" xsd:anyURI
+property_value: skos:altLabel "differential equations model" xsd:string
+property_value: skos:altLabel "model based on differential equations" xsd:string
+property_value: skos:altLabel "model using differential equations" xsd:string
+property_value: skos:definition "Differential equations describe the rate of change of continuous variables. They are typically used for modeling dynamical systems in several areas." xsd:string
+property_value: skos:prefLabel "differential equation model" xsd:string
+
+[Term]
+id: MAMO:0000046
+is_a: MAMO:0000045
+disjoint_from: MAMO:0000047
+relationship: mamo:hasFeature MAMO:0000063
+property_value: seeAlso "http://en.wikipedia.org/wiki/Ordinary_differential_equation" xsd:anyURI
+property_value: skos:altLabel "model based on ordinary differential equations" xsd:string
+property_value: skos:altLabel "model using ordinary differential equation" xsd:string
+property_value: skos:altLabel "ODE model" xsd:string
+property_value: skos:altLabel "ordinary differential equations model" xsd:string
+property_value: skos:definition "model using equations containing a function of one independent variable and its derivatives." xsd:string
+property_value: skos:prefLabel "ordinary differential equation model" xsd:string
+
+[Term]
+id: MAMO:0000047
+is_a: MAMO:0000045
+relationship: mamo:hasFeature MAMO:0000064
+property_value: seeAlso "http://en.wikipedia.org/wiki/Stochastic_differential_equation" xsd:anyURI
+property_value: skos:altLabel "model based on stochastic differential equations" xsd:string
+property_value: skos:altLabel "model using stochastic differential equations" xsd:string
+property_value: skos:altLabel "SDE model" xsd:string
+property_value: skos:altLabel "stochastic differential equations model" xsd:string
+property_value: skos:definition "model using differential equations in which one or more of the terms is a stochastic process, resulting in a solution which is itself a stochastic process" xsd:string
+property_value: skos:prefLabel "stochastic differential equation model" xsd:string
+
+[Term]
+id: MAMO:0000048
+is_a: MAMO:0000045
+relationship: mamo:hasFeature MAMO:0000063
+property_value: seeAlso "http://en.wikipedia.org/wiki/Partial_differential_equation" xsd:anyURI
+property_value: skos:altLabel "model based on partial differential equations" xsd:string
+property_value: skos:altLabel "model using partial differential equations" xsd:string
+property_value: skos:altLabel "partial differential equations model" xsd:string
+property_value: skos:altLabel "PDE model" xsd:string
+property_value: skos:definition "model using differential equations that contains unknown multivariable functions and their partial derivatives." xsd:string
+property_value: skos:prefLabel "partial differential equation model" xsd:string
+
+[Term]
+id: MAMO:0000049
+is_a: MAMO:0000003
+relationship: mamo:hasFeature MAMO:0000056
+relationship: mamo:hasFeature MAMO:0000059
+relationship: mamo:hasFeature MAMO:0000064
+relationship: mamo:isUsedToModel MAMO:0000038
+property_value: seeAlso "http://en.wikipedia.org/wiki/Finite-state_machine" xsd:anyURI
+property_value: skos:definition "Interacting state machines are diagram-based formalisms that describe the temporal behavior of a system based on the changes in the states of its parts. They differ from other approaches as they define a system in terms of its states rather than its components." xsd:string
+property_value: skos:prefLabel "interacting state machine" xsd:string
+
+[Term]
+id: MAMO:0000050
+is_a: MAMO:0000023
+relationship: mamo:hasFeature MAMO:0000059
+relationship: mamo:isUsedToModel MAMO:0000038
+relationship: mamo:isUsedToModel MAMO:0000039
+relationship: mamo:isUsedToModel MAMO:0000040
+property_value: seeAlso "http://en.wikipedia.org/wiki/Cellular_automaton" xsd:anyURI
+property_value: skos:definition "Cellular automata are discrete dynamic models that consist on a grid of cells with a finite number of states. A cellular automaton has an initial configuration that changes at each time step through a predefined rule that calculates the state of each cell as a function of the state of its neighbors at the previous step." xsd:string
+property_value: skos:prefLabel "cellular automaton" xsd:string
+
+[Term]
+id: MAMO:0000051
+is_a: MAMO:0000050
+relationship: mamo:hasFeature MAMO:0000056
+property_value: seeAlso "http://identifiers.org/pubmed/15972011" xsd:anyURI {comment="Wishart DS, Yang R, Arndt D, Tang P, Cruz J (2005) Dynamic cellular automata: an alternative approach to cellular simulation. In Silico Biol., 5(2):139-61."}
+property_value: skos:altLabel "DSA" xsd:string
+property_value: skos:definition "Dynamic cellular automata are a variation of cellular automata that allows for movement of the cell contents inside the grid, mimicking brownian motion." xsd:string
+property_value: skos:prefLabel "dynamic cellular automaton" xsd:string
+
+[Term]
+id: MAMO:0000052
+is_a: MAMO:0000050
+relationship: mamo:hasFeature MAMO:0000064
+property_value: seeAlso "http://en.wikipedia.org/wiki/Stochastic_cellular_automaton" xsd:anyURI
+property_value: skos:definition "Cellular automaton whose updating rule is stochastic, which means the new entity's state is not chosen deterministically based on the neighbours' states, but according to some probability distributions depending on the neighbours' states." xsd:string
+property_value: skos:prefLabel "stochastic cellular automaton" xsd:string
+
+[Term]
+id: MAMO:0000053
+is_a: MAMO:0000030
+relationship: mamo:isUsedToModel MAMO:0000039
+property_value: seeAlso "http://en.wikipedia.org/wiki/Boolean_network" xsd:anyURI
+property_value: seeAlso "http://identifiers.org/pubmed/5803332" xsd:anyURI {comment="Kauffman S (1969) Metabolic stability and epigenesis in randomly constructed genetic nets. J Theor Biol 22(3):437–467"}
+property_value: skos:definition "Boolean models model networks of genes by boolean variables that represent active and inactive states. At each time step, the state of each gene is determined by a logic rule which is a function of the state of its regulators. The state of all genes forms a global state that changes synchronously." xsd:string
+property_value: skos:prefLabel "boolean model" xsd:string
+
+[Term]
+id: MAMO:0000054
+property_value: skos:altLabel "modeling entity feature" xsd:string
+property_value: skos:definition "Dependent entity which another modelling entity has, i.e., that entity exhibits its property. Other common terms for property in natural language are characteristic, property, quality, etc." xsd:string
+property_value: skos:prefLabel "modelling entity feature" xsd:string
+
+[Term]
+id: MAMO:0000055
+is_a: MAMO:0000054
+disjoint_from: MAMO:0000058
+property_value: seeAlso "http://en.wikipedia.org/wiki/Temporality" xsd:anyURI
+property_value: skos:definition "Characterises the evolution of a modelling entity over time." xsd:string
+property_value: skos:prefLabel "temporal quality" xsd:string
+
+[Term]
+id: MAMO:0000056
+is_a: MAMO:0000055
+disjoint_from: MAMO:0000057
+property_value: seeAlso "http://en.wikipedia.org/wiki/Dynamical" xsd:anyURI
+property_value: skos:definition "Characterises a modelling entity that evolves over time." xsd:string
+property_value: skos:prefLabel "dynamical characteristic" xsd:string
+
+[Term]
+id: MAMO:0000057
+is_a: MAMO:0000055
+property_value: seeAlso "http://en.wiktionary.org/wiki/static" xsd:anyURI
+property_value: skos:definition "Characterises a modelling entity that does not evolve over time." xsd:string
+property_value: skos:prefLabel "static characteristic" xsd:string
+
+[Term]
+id: MAMO:0000058
+is_a: MAMO:0000054
+property_value: seeAlso "http://en.wiktionary.org/wiki/qualitative" xsd:anyURI
+property_value: seeAlso "http://en.wiktionary.org/wiki/quantitative" xsd:anyURI
+property_value: skos:definition "Characterises the possibility to be measured numerically." xsd:string
+property_value: skos:prefLabel "quantitative characteristic" xsd:string
+
+[Term]
+id: MAMO:0000059
+is_a: MAMO:0000058
+disjoint_from: MAMO:0000060
+property_value: seeAlso "http://en.wiktionary.org/wiki/discrete" xsd:anyURI
+property_value: skos:definition "Which values can be enumerated." xsd:string
+property_value: skos:prefLabel "discrete characteristic" xsd:string
+
+[Term]
+id: MAMO:0000060
+is_a: MAMO:0000058
+property_value: seeAlso "http://en.wiktionary.org/wiki/continuous" xsd:anyURI
+property_value: skos:definition "Which values cannot be enumerated. Whatever two values, there is always another value in between." xsd:string
+property_value: skos:prefLabel "continuous characteristic" xsd:string
+
+[Term]
+id: MAMO:0000061
+is_a: MAMO:0000054
+property_value: seeAlso " http://en.wikipedia.org/wiki/Nonlinear" xsd:anyURI
+property_value: seeAlso "http://en.wikipedia.org/wiki/Linear_system" xsd:anyURI
+property_value: skos:definition "Which satisfies the principles of superposition and scaling." xsd:string
+property_value: skos:prefLabel "linear quality" xsd:string
+
+[Term]
+id: MAMO:0000062
+is_a: MAMO:0000054
+property_value: seeAlso " http://en.wikipedia.org/wiki/Uncertainty" xsd:anyURI
+property_value: skos:definition "Characterises the certainty, or lack of, of the modelling entity feature." xsd:string
+property_value: skos:prefLabel "uncertainty level" xsd:string
+
+[Term]
+id: MAMO:0000063
+is_a: MAMO:0000062
+disjoint_from: MAMO:0000064
+property_value: seeAlso "http://en.wikipedia.org/wiki/Deterministic" xsd:anyURI
+property_value: skos:definition "Which value or behaviour is certain." xsd:string
+property_value: skos:prefLabel "deterministic nature" xsd:string
+
+[Term]
+id: MAMO:0000064
+is_a: MAMO:0000062
+property_value: seeAlso "http://en.wikipedia.org/wiki/Probabilistic" xsd:anyURI
+property_value: skos:altLabel "stochastic nature" xsd:string
+property_value: skos:definition "Which can exhibit alternative values or behaviours with differnent probability." xsd:string
+property_value: skos:prefLabel "probabilistic nature" xsd:string
+
+[Term]
+id: MAMO:0000069
+is_a: MAMO:0000025
+property_value: seeAlso "http://en.wikipedia.org/wiki/Coloured_Petri_net" xsd:anyURI
+property_value: seeAlso "http://identifiers.org/isbn/978-3-642-00284-7" xsd:anyURI {comment="Jensen K, Kristensen LM. Coloured Petri Nets: Modeling and Validation of Concurrent Systems. Berlin: Springer, 2009."}
+property_value: skos:altLabel "colored Petri net" xsd:string
+property_value: skos:altLabel "CP-net" xsd:string
+property_value: skos:altLabel "CPN" xsd:string
+property_value: skos:definition "graphical language for modelling and validating concurrent and distributed systems, and other systems in which concurrency plays a major role" xsd:string
+property_value: skos:prefLabel "coloured Petri net" xsd:string
+
+[Term]
+id: MAMO:0000070
+is_a: MAMO:0000025
+relationship: mamo:hasFeature MAMO:0000060
+property_value: seeAlso "http://identifiers.org/isbn/978-3-642-10669-9" xsd:anyURI {comment="David R, Alla H. Discrete, continuous, and hybrid Petri Nets. Berlin, London: Springer, 2010."}
+property_value: skos:altLabel "continuous PN" xsd:string
+property_value: skos:definition "Petri net model in which the number of marks in the places are real numbers instead of integers" xsd:string
+property_value: skos:prefLabel "continuous Petri net" xsd:string
+
+[Term]
+id: MAMO:0000071
+is_a: MAMO:0000025
+property_value: seeAlso "http://identifiers.org/pubmed/17626066" xsd:anyURI {comment="Chaouiya C. Petri net modelling of biological networks. Brief Bioinform. 2007;8(4):210-9."}
+property_value: skos:altLabel "functional PN" xsd:string
+property_value: skos:altLabel "functional PNs" xsd:string
+property_value: skos:altLabel "self-modified Petri net" xsd:string
+property_value: skos:altLabel "self-modified PN" xsd:string
+property_value: skos:altLabel "self-modified PNs" xsd:string
+property_value: skos:definition " A Petri net that allows the flow relations between places and transitions to depend on the marking." xsd:string
+property_value: skos:prefLabel "functional Petri net " xsd:string
+
+[Term]
+id: MAMO:0000072
+is_a: MAMO:0000071
+is_a: MAMO:0000073
+property_value: seeAlso "http://identifiers.org/pubmed/12954096" xsd:anyURI {comment="Matsuno H, Tanaka Y, Aoshima H, Doi A, Matsui M, Miyano S. Biopathways representation and simulation on hybrid functional Petri net. In Silico Biol. 2003;3(3):389-404."}
+property_value: skos:altLabel "HFPN" xsd:string
+property_value: skos:altLabel "HFPNs" xsd:string
+property_value: skos:altLabel "hybrid functional PN" xsd:string
+property_value: skos:altLabel "Hybrid functional PNs" xsd:string
+property_value: skos:definition "hybrid Petri nets with additional features: continuous transition firing rates can depend on the values of the input places and the weights of arcs can be defined as a function of the markings of the connected places." xsd:string
+property_value: skos:prefLabel "hybrid functional Petri net" xsd:string
+
+[Term]
+id: MAMO:0000073
+is_a: MAMO:0000025
+property_value: seeAlso "http://identifiers.org/pubmed/17626066" xsd:anyURI {comment="Chaouiya C. Petri net modelling of biological networks. Brief Bioinform. 2007;8(4):210-9."}
+property_value: skos:altLabel "HPN" xsd:string
+property_value: skos:altLabel "HPNs" xsd:string
+property_value: skos:altLabel "hybrid PN" xsd:string
+property_value: skos:definition "Petri nets that allow the coexistence of both continuous and discrete processes. They include discrete places (marked with tokens) and continuous places associated with real variables (e.g. concentration levels). " xsd:string
+property_value: skos:prefLabel "hybrid Petri net" xsd:string
+
+[Term]
+id: MAMO:0000074
+is_a: MAMO:0000025
+relationship: mamo:hasFeature MAMO:0000059
+relationship: mamo:hasFeature MAMO:0000064
+property_value: seeAlso "http://en.wikipedia.org/wiki/Stochastic_Petri_net" xsd:anyURI
+property_value: skos:altLabel "SPN" xsd:string
+property_value: skos:altLabel "stochastic PN" xsd:string
+property_value: skos:definition "form of Petri net where the transitions fire after a probabilistic delay determined by a random variable." xsd:string
+property_value: skos:prefLabel "stochastic Petri net" xsd:string
+
+[Term]
+id: MAMO:0000075
+is_a: MAMO:0000004
+property_value: seeAlso "https://en.wikipedia.org/wiki/Logistic_regression" xsd:anyURI
+property_value: skos:altLabel "logit regression" xsd:string
+property_value: skos:definition "type of probabilistic classification model used for predicting the outcome of a categorical dependent variable (i.e., a class label) based on one or more predictor variables (features)." xsd:string
+property_value: skos:prefLabel "logistic regression" xsd:string
+
+[Term]
+id: MAMO:0000076
+is_a: MAMO:0000004
+relationship: mamo:hasFeature MAMO:0000063
+relationship: mamo:hasFeature MAMO:0000064
+property_value: seeAlso "http://en.wikipedia.org/wiki/Mixed_model" xsd:anyURI
+property_value: skos:definition "statistical model containing both fixed effects and random effects, that is mixed effects." xsd:string
+property_value: skos:prefLabel "mixed model" xsd:string
+
+[Term]
+id: MAMO:0000077
+is_a: MAMO:0000004
+property_value: seeAlso "https://en.wikipedia.org/wiki/Multinomial_logistic_regression" xsd:anyURI
+property_value: skos:altLabel "multinomial logit" xsd:string
+property_value: skos:altLabel "softmax regression" xsd:string
+property_value: skos:definition "regression model which generalizes logistic regression by allowing more than two discrete outcomes." xsd:string
+property_value: skos:prefLabel "multinomial logistic regression" xsd:string
+
+[Term]
+id: MAMO:0000078
+is_a: MAMO:0000004
+property_value: seeAlso "https://en.wikipedia.org/wiki/Poisson_regression" xsd:anyURI
+property_value: skos:definition "form of regression analysis used to model count data and contingency tables. Poisson regression assumes the response variable Y has a Poisson distribution, and assumes the logarithm of its expected value can be modeled by a linear combination of unknown parameters. " xsd:string
+property_value: skos:prefLabel "Poisson regression" xsd:string
+
+[Term]
+id: MAMO:0000080
+is_a: MAMO:0000086
+relationship: mamo:hasFeature MAMO:0000059
+property_value: seeAlso "https://en.wikipedia.org/wiki/Binary_data" xsd:anyURI
+property_value: skos:definition "Data whose individual element can take on only two possible values, traditionally termed 0 and 1 in accordance with the binary numeral system and Boolean algebra. " xsd:string
+property_value: skos:prefLabel "binary data variable" xsd:string
+
+[Term]
+id: MAMO:0000081
+is_a: MAMO:0000086
+relationship: mamo:hasFeature MAMO:0000059
+property_value: seeAlso "https://en.wikipedia.org/wiki/Categorical_data" xsd:anyURI
+property_value: skos:altLabel "nominal categorical data variable" xsd:string
+property_value: skos:definition "Statistical data type consisting of categorical variables, used for observed data whose value is one of a fixed number of nominal categories, or for data that has been converted into that form, for example as grouped data." xsd:string
+property_value: skos:prefLabel "categorical data variable" xsd:string
+
+[Term]
+id: MAMO:0000082
+is_a: MAMO:0000086
+relationship: mamo:hasFeature MAMO:0000059
+property_value: seeAlso "https://en.wikipedia.org/wiki/Count_variable" xsd:anyURI
+property_value: skos:definition "Statistical data type, a type of data in which the observations can take only the non-negative integer values {0, 1, 2, 3, ...}, and where these integers arise from counting rather than ranking." xsd:string
+property_value: skos:prefLabel "count data variable" xsd:string
+
+[Term]
+id: MAMO:0000083
+is_a: MAMO:0000086
+property_value: seeAlso "http://en.wikipedia.org/wiki/Longitudinal_study" xsd:anyURI
+property_value: skos:definition "repeated observations of the same variables over time." xsd:string
+property_value: skos:prefLabel "longitudinal data variable" xsd:string
+
+[Term]
+id: MAMO:0000084
+is_a: MAMO:0000027
+property_value: seeAlso "https://en.wikipedia.org/wiki/Phase_portrait" xsd:anyURI
+property_value: skos:definition "representation of the trajectories of a dynamical system in the phase plane. Each set of initial conditions is represented by a different curve, or point." xsd:string
+property_value: skos:prefLabel "phase portrait" xsd:string
+
+[Term]
+id: MAMO:0000085
+is_a: MAMO:0000027
+property_value: seeAlso "https://en.wikipedia.org/wiki/Steady-state" xsd:anyURI
+property_value: skos:definition "value that does not change over time" xsd:string
+property_value: skos:prefLabel "steady state value" xsd:string
+
+[Term]
+id: MAMO:0000086
+is_a: MAMO:0000010
+property_value: seeAlso "https://en.wikipedia.org/wiki/Statistical_data_type" xsd:anyURI
+property_value: skos:definition "In statistics, groups of individual data points may be classified as belonging to any of various statistical data types, e.g. categorical (\"red\", \"blue\", \"green\"), real number (1.68, -5, 1.7e+6), etc." xsd:string
+property_value: skos:prefLabel "statistical variable" xsd:string
+
+[Term]
+id: MAMO:0000087
+is_a: MAMO:0000019
+property_value: seeAlso "http://www.fda.gov/downloads/Drugs/Guidances/UCM072137.pdf" xsd:anyURI {comment="Guidance for Industry, Population Pharmacokinetics, U.S. Department of Health and Human Services, Food and Drug Administration, Center for Drug Evaluation and Research (CDER), Center for Biologics Evaluation and Research (CBER)February 1999."}
+property_value: skos:definition "Model to study the sources and correlates of variability in drug concentrations among individuals who are the target patient population receiving clinically relevant doses of a drug of interest." xsd:string
+property_value: skos:prefLabel "population pharmacokinetics model" xsd:string
+
+[Term]
+id: MAMO:0000088
+is_a: MAMO:0000180
+property_value: seeAlso "http://lenoverelab.org/perso/lenov/PUBLIS/Tolle2006.pdf" xsd:anyURI {comment="Tolle D., Le Novère N. Particle-based Stochastic Simulation in Systems Biology. Current Bioinformatics (2006), 1: 315-320."}
+property_value: skos:altLabel "mesoscopic model" xsd:string
+property_value: skos:definition "model where the reactions and diffusion of each particle in a population is described and followed over time. Sometimes called mesoscopic model, because more abstract than an atomic or molecular dynamic model, but more detailed than a concentration based reaction diffusion model. " xsd:string
+property_value: skos:prefLabel "single particle spatial model" xsd:string
+
+[Term]
+id: MAMO:0000089
+is_a: MAMO:0000045
+property_value: seeAlso "https://en.wikipedia.org/wiki/Delay_differential_equation" xsd:anyURI
+property_value: skos:altLabel "DDE model" xsd:string
+property_value: skos:altLabel "delayed differential equations model" xsd:string
+property_value: skos:altLabel "model based on delayed differential equations" xsd:string
+property_value: skos:altLabel "model using delayed differential equations" xsd:string
+property_value: skos:definition "model using a type of differential equation in which the derivative of the unknown function at a certain time is given in terms of the values of the function at previous times." xsd:string
+property_value: skos:prefLabel "delayed differential equation model " xsd:string
+
+[Term]
+id: MAMO:0000090
+is_a: MAMO:0000045
+property_value: seeAlso "https://en.wikipedia.org/wiki/Differential_algebraic_equation" xsd:anyURI
+property_value: skos:altLabel "DAE model" xsd:string
+property_value: skos:altLabel "differential algebraic equations model" xsd:string
+property_value: skos:altLabel "model based on differential algebraic equations" xsd:string
+property_value: skos:altLabel "model using differential algebraic equations" xsd:string
+property_value: skos:definition "general form of (systems of) differential equations for vector–valued functions x in one independent variable," xsd:string
+property_value: skos:prefLabel "differential algebraic equation model" xsd:string
+
+[Term]
+id: MAMO:0000180
+is_a: MAMO:0000037
+property_value: skos:prefLabel "domain model" xsd:string
+
+[Term]
+id: MAMO:0000181
+is_a: MAMO:0000180
+property_value: seeAlso "https://en.wikipedia.org/wiki/Pharmacometrics" xsd:string
+property_value: skos:definition "model used to describe and quantify interactions between xenobiotics and patients." xsd:string
+property_value: skos:prefLabel "pharmacometrics model" xsd:string
+
+[Term]
+id: MAMO:0000182
+is_a: MAMO:0000030
+property_value: seeAlso "http://identifiers.org/isbn/978-3-540-09556-9" xsd:anyURI {comment="P Van Ham. How to deal with variables with more than two levels. In Kinetic Logic A Boolean Approach to the Analysis of Complex Regulatory Systems. Lecture Notes in Biomathematics Vol 29, 1979, pp 326-343"}
+property_value: skos:definition "logical model in which variables can take more than two levels." xsd:string
+property_value: skos:prefLabel "multi-value logic model" xsd:string
+
+[Term]
+id: MAMO:0000183
+is_a: MAMO:0000050
+property_value: seeAlso "http://dx.doi.org/10.1103/PhysRevLett.69.2013" xsd:anyURI {comment="Graner F and Glazier JA. Simulation of biological cell sorting using a two-dimensional extended Potts model, Phys. Rev. Lett. 69, 2013 - Published 28 September 1992."}
+property_value: seeAlso "http://en.wikipedia.org/wiki/Cellular_Potts_model" xsd:anyURI
+property_value: skos:altLabel "extended large-q Potts model" xsd:string
+property_value: skos:altLabel "Glazier and Graner model" xsd:string
+property_value: skos:definition "generalized version of a Potts model, where the cell associated with a spin can be composed of several elements, called pixels. Simulations progress by updating the pixels." xsd:string
+property_value: skos:prefLabel "cellular Potts model" xsd:string
+
+[Term]
+id: MAMO:0000184
+is_a: MAMO:0000183
+property_value: seeAlso "http://en.wikipedia.org/wiki/Potts_model" xsd:anyURI
+property_value: skos:definition "cellular Potts model in which each cell is made up of only one pixel (q-spin). The standard Potts model is a generalisation of the Ising model where the spin can take a discret number of values regularly distributed." xsd:string
+property_value: skos:prefLabel "standard Potts model" xsd:string
+
+[Term]
+id: MAMO:0000185
+is_a: MAMO:0000184
+property_value: seeAlso "http://en.wikipedia.org/wiki/Ising_model" xsd:anyURI
+property_value: seeAlso "http://identifiers.org/pubmed/10468569" xsd:anyURI {comment="Duke TA, Bray D. Heightened sensitivity of a lattice of membrane receptors. Proc Natl Acad Sci U S A. 1999;96(18):10104-8."}
+property_value: skos:definition "model that consists of discrete variables, called spins, that can be in one of two states (+1 or −1). The spins are arranged in a graph, usually, a lattice," xsd:string
+property_value: skos:prefLabel "Ising model" xsd:string
+
+[Term]
+id: MAMO:0000186
+is_a: MAMO:0000030
+property_value: seeAlso "http://identifiers.org/pubmed/19343194" xsd:anyURI {comment="Aldridge BB, Saez-Rodriguez J, Muhlich JL, Sorger PK, Lauffenburger DA. Fuzzy logic analysis of kinase pathway crosstalk in TNF/EGF/insulin-induced signaling. PLoS Comput Biol. 2009;5(4):e1000340."}
+property_value: skos:definition "logical model which rely on fuzzy logic for deciding the new values of variables, that is the use of truth values instead of truth table to interpret the inputs and the resulting output." xsd:string
+property_value: skos:prefLabel "fuzzy logic model" xsd:string
+
+[Term]
+id: MAMO:0000187
+is_a: MAMO:0000182
+property_value: seeAlso "http://identifiers.org/doi/10.1080/02681118908806072" xsd:anyURI {comment="Snoussi EH. Qualitative dynamics of piecewise-linear differential equations: a discrete mapping approach. Dyn Stab Syst 1989, 4(3-4): 565-583"}
+property_value: skos:definition "multi-valued logical model with multiple thresholds to assign variable values, logical parameters controlling the assignments, and asynchronous update." xsd:string
+property_value: skos:prefLabel "generalized logical model" xsd:string
+
+[Term]
+id: MAMO:0000188
+is_a: MAMO:0000036
+is_a: MAMO:0000046
+property_value: seeAlso "http://en.wikipedia.org/wiki/Biochemical_systems_theory" xsd:anyURI
+property_value: seeAlso "http://identifier.org/pubmed/5387047" xsd:anyURI {comment="Savageau MA. Biochemical systems analysis. II. The steady-state solutions for an n-pool system using a power-law approximation. J Theor Biol. 1969 Dec;25(3):370-9."}
+property_value: skos:definition "model in which the creation and destruction of a molecular species are represented using two power-law expansions in the species of the system. Reactions are not represented independently, but are subsumed in the apparent global reaction order (not necessarily integer) for the species affecting its rate." xsd:string
+property_value: skos:prefLabel "S system model" xsd:string
+
+[Term]
+id: MAMO:0000189
+is_a: MAMO:0000019
+disjoint_from: MAMO:0000191
+property_value: seeAlso "http://identifier.org/isbn/978-0387-27197-2" xsd:anyURI {comment="Bonate PL (2006) Pharmacokinetic-Pharmacodynamic; Modeling and simulation. p 57"}
+property_value: seeAlso "https://en.wikipedia.org/wiki/Linear_model#Time_series_models" xsd:anyURI
+property_value: skos:definition "pharmacokinetic model expressed as differential equations in which partial derivatives with respect to any of the model parameters are independent of the other parameters" xsd:string
+property_value: skos:prefLabel "linear pharmacokinetic model" xsd:string
+
+[Term]
+id: MAMO:0000190
+is_a: MAMO:0000189
+property_value: seeAlso "http://identifier.org/isbn/978-0387-27197-2" xsd:anyURI {comment="Bonate PL (2006) Pharmacokinetic-Pharmacodynamic; Modeling and simulation. p 181"}
+property_value: skos:definition "linear pharmacokinetic model which contain both fixed and random effects (mixed)" xsd:string
+property_value: skos:prefLabel "linear mixed effect pharmacokinetic model" xsd:string
+
+[Term]
+id: MAMO:0000191
+is_a: MAMO:0000019
+property_value: seeAlso "http://identifier.org/isbn/978-0387-27197-2" xsd:anyURI {comment="Bonate PL (2006) Pharmacokinetic-Pharmacodynamic; Modeling and simulation. p 93"}
+property_value: skos:definition "pharmacokinetic model expressed as differential equations in which any partial derivatives with respect to any of the model parameters are dependent on any other model parameter or for which the derivatives do not exist or are discontinuous" xsd:string
+property_value: skos:prefLabel "nonlinear pharmacokinetic model" xsd:string
+
+[Term]
+id: MAMO:0000192
+is_a: MAMO:0000191
+property_value: seeAlso "http://identifier.org/isbn/978-0387-27197-2" xsd:anyURI {comment="Bonate PL (2006) Pharmacokinetic-Pharmacodynamic; Modeling and simulation. p 205"}
+property_value: skos:definition "nonlinear pharmacokinetic model which contain both fixed and random effects (mixed)" xsd:string
+property_value: skos:prefLabel "nonlinear mixed effect pharmacokinetic model" xsd:string
+
+[Term]
+id: MAMO:0000193
+is_a: MAMO:0000003
+relationship: mamo:hasFeature MAMO:0000064
+property_value: seeAlso "https://en.wikipedia.org/wiki/Markov_model" xsd:anyURI
+property_value: skos:definition "a stochastic model, that models a process where the state depends on previous states in a non-deterministic way, and assumes the Markov property: the conditional probability distribution of future states of the process (conditional on both past and present values) depends only upon the present state; that is, given the present, the future does not depend on the past." xsd:string
+property_value: skos:prefLabel "Markov model" xsd:string
+
+[Term]
+id: MAMO:0000194
+is_a: MAMO:0000193
+property_value: seeAlso "http://en.wikipedia.org/wiki/Hidden_Markov_model" xsd:anyURI
+property_value: skos:altLabel "HMM" xsd:string
+property_value: skos:definition "a Markov model in which the system being modeled is autonomous and its state is only partially observable. In other words, observations are related to the state of the system, but they are typically insufficient to precisely determine the state." xsd:string
+property_value: skos:prefLabel "hidden Markov model" xsd:string
+
+[Term]
+id: MAMO:0000195
+is_a: MAMO:0000193
+property_value: seeAlso "http://en.wikipedia.org/wiki/Markov_chain" xsd:anyURI
+property_value: skos:altLabel "discrete-time Markov chain" xsd:string
+property_value: skos:altLabel "DTMC" xsd:string
+property_value: skos:definition "a Markov model that models the state of a system with a random variable that changes through time. In this context, the Markov property suggests that the distribution for this variable depends only on the distribution of the previous state. The system is autonomous and its state is fully observable." xsd:string
+property_value: skos:prefLabel "Markov chain" xsd:string
+
+[Term]
+id: MAMO:0000196
+is_a: MAMO:0000193
+property_value: seeAlso "http://en.wikipedia.org/wiki/Markov_decision_process" xsd:anyURI
+property_value: skos:altLabel "MDP" xsd:string
+property_value: skos:definition "a mathematical framework for modeling decision making in situations where outcomes are partly random and partly under the control of a decision maker." xsd:string
+property_value: skos:prefLabel "Markov decision process" xsd:string
+
+[Term]
+id: MAMO:0000197
+is_a: MAMO:0000193
+property_value: seeAlso "http://en.wikipedia.org/wiki/Markov_random_field" xsd:anyURI
+property_value: skos:altLabel "Markov network" xsd:string
+property_value: skos:altLabel "MRF" xsd:string
+property_value: skos:altLabel "undirected graphical model" xsd:string
+property_value: skos:definition "a set of random variables having a Markov property described by an undirected graph. A Markov random field may be considered to be a generalization of a Markov chain in multiple dimensions. In a Markov chain, state depends only on the previous state in time, whereas in a Markov random field, each state depends on its neighbors in any of multiple directions. A Markov random field may be visualized as a field or graph of random variables, where the distribution of each random variable depends on the neighboring variables with which it is connected." xsd:string
+property_value: skos:prefLabel "Markov random field" xsd:string
+
+[Term]
+id: MAMO:0000198
+is_a: MAMO:0000045
+property_value: seeAlso "http://en.wikipedia.org/wiki/Piecewise_linear_function" xsd:anyURI
+property_value: seeAlso "http://identifiers.org/pubmed/4741704" xsd:anyURI {comment="Glass L, Kauffman SA. The logical analysis of continuous, non-linear biochemical control networks. J Theor Biol. 1973;39(1):103-29."}
+property_value: skos:altLabel "model based on piecewise linear differential equations" xsd:string
+property_value: skos:altLabel "model using piecewise linear differential equations" xsd:string
+property_value: skos:altLabel "piecewise linear differential equations model" xsd:string
+property_value: skos:definition "model using functions that respond to parameter values via threshold (Heavyside) functions." xsd:string
+property_value: skos:prefLabel "piecewise linear differential equation model" xsd:string
+
+[Term]
+id: MAMO:0000199
+is_a: MAMO:0000198
+relationship: mamo:hasFeature MAMO:0000059
+property_value: seeAlso "http://identifiers.org/pubmed/16521027" xsd:anyURI {comment="Coutinho R, Fernandez B, Lima R, Meyroneinc A. Discrete time piecewise affine models of genetic regulatory networks. J Math Biol. 2006 Apr;52(4):524-70. Epub 2006 Mar 6."}
+property_value: skos:definition "model using piecewise linear differential equations in which variables are updated only at certain times." xsd:string
+property_value: skos:prefLabel "discrete time piecewise linear differential equation model" xsd:string
+
+[Term]
+id: MAMO:0000200
+is_a: MAMO:0000198
+property_value: seeAlso "http://identifiers.org/pubmed/14871568" xsd:anyURI {comment="De Jong H1, Gouze JL, Hernandez C, Page M, Sari T, Geiselmann J. Qualitative simulation of genetic regulatory networks using piecewise-linear models. Bull Math Biol. 2004 Mar;66(2):301-40."}
+property_value: skos:definition "piecewise linear differential equation model in which the variables can only take a discrete number of levels." xsd:string
+property_value: skos:prefLabel "qualitative piecewise linear differential equation model" xsd:string
+
+[Term]
+id: MAMO:0000202
+is_a: MAMO:0000036
+property_value: seeAlso "http://en.wikipedia.org/wiki/Protein%E2%80%93protein_interaction" xsd:anyURI
+property_value: seeAlso "http://identifiers.org/pubmed/22385417" xsd:anyURI {comment="Koh et al. Analyzing protein-protein interaction networks. J Proteome Res. 2012; 11(4):2014-31."}
+property_value: skos:altLabel "PIN" xsd:string
+property_value: skos:altLabel "PPI" xsd:string
+property_value: skos:altLabel "PPI network" xsd:string
+property_value: skos:altLabel "PPIN" xsd:string
+property_value: skos:altLabel "PPIs" xsd:string
+property_value: skos:definition "A network representing intentional physical contacts established between two or more proteins as a result of biochemical events and/or electrostatic forces." xsd:string
+property_value: skos:prefLabel "protein-protein interaction network" xsd:string
+
+[Term]
+id: MAMO:0000203
+is_a: MAMO:0000019
+property_value: seeAlso "http://en.wikipedia.org/wiki/Physiologically_based_pharmacokinetic_modelling" xsd:anyURI
+property_value: seeAlso "http://identifiers.org/pubmed/23945604" xsd:anyURI {comment="HM Jones and K Rowland-Yeo Basic Concepts in Physiologically Based Pharmacokinetic Modeling in Drug Discovery and Development (2013) Pharmacometrics Syst Pharmacol. 2(8): e63."}
+property_value: skos:altLabel "PBPK" xsd:string
+property_value: skos:definition "A model using a series of differential equations that are parametrized with known physiological variables and represent a quantitative mechanistic framework by which the absorption, distribution, metabolism, and excretion (ADME) of new drugs can be described." xsd:string
+property_value: skos:prefLabel "physiologically based pharmacokinetic model" xsd:string
+
+[Term]
+id: MAMO:0000204
+is_a: MAMO:0000185
+property_value: seeAlso "https://en.wikipedia.org/wiki/Square-lattice_Ising_model" xsd:anyURI
+property_value: skos:definition "2D Ising model [http://identifiers.org/mamo/MAMO_0000185] of interacting magnetic spins on a square lattice." xsd:string
+property_value: skos:prefLabel "square-lattice Ising model" xsd:string
+
+[Term]
+id: MAMO:0000205
+is_a: MAMO:0000180
+property_value: seeAlso "http://identifiers.org/pubmed/22817898" xsd:anyURI {comment="Karr et al. A whole-cell computational model predicts phenotype from genotype. Cell. 2012; 150(2):389-401."}
+property_value: skos:definition "Computational model that includes all of the molecular components of a biological cell and their interactions." xsd:string
+property_value: skos:prefLabel "whole-cell model" xsd:string
+
+[Term]
+id: mamo:MAMO_0000206
+is_a: MAMO:0000028
+is_a: MAMO:0000180
+relationship: mamo:hasFeature MAMO:0000064
+property_value: seeAlso "http://identifiers.org/doi/10.1007/978-3-540-78911-6_2" xsd:string {comment="Brauer F. Compartmental Models in Epidemiology. Mathematical Epidemiology. 2008;1945:19-79."}
+property_value: seeAlso "https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology" xsd:string
+property_value: skos:definition "Compartmental models simplify the mathematical modelling of infectious diseases. The population is assigned to compartments with labels - for example, S, I, or R, (Susceptible, Infectious, or Recovered). People may progress between compartments. The order of the labels usually shows the flow patterns between the compartments; for example SEIS means susceptible, exposed, infectious, then susceptible again." xsd:string
+property_value: skos:prefLabel "epidemiological compartmental model" xsd:string
+
+[Term]
+id: mamo:MAMO_0000207
+is_a: mamo:MAMO_0000206
+disjoint_from: mamo:MAMO_0000208
+property_value: seeAlso "http://identifiers.org/doi/10.1007/978-3-540-78911-6_2" xsd:string {comment="Brauer F. Compartmental Models in Epidemiology. Mathematical Epidemiology. 2008;1945:19-79."}
+property_value: seeAlso "http://identifiers.org/doi/10.1098/rspa.1927.0118" xsd:string {comment="Kermack, W. O. and McKendrick, A. G. \"A Contribution to the Mathematical Theory of Epidemics.\" Proc. Roy. Soc. Lond. A 115, 700-721, 1927."}
+property_value: skos:altLabel "SIR" xsd:string
+property_value: skos:altLabel "susceptible-infectious-removed" xsd:string
+property_value: skos:altLabel "susceptible-infectious-removed model" xsd:string
+property_value: skos:definition "A compartmental epidemiological model with three compartments: susceptible S, infectious I, and removed R. The passage of individuals is modelled from S to I to R." xsd:string
+property_value: skos:prefLabel "SIR model" xsd:string
+
+[Term]
+id: mamo:MAMO_0000208
+is_a: mamo:MAMO_0000206
+property_value: seeAlso "http://identifiers.org/doi/10.1007/978-3-540-78911-6_2" xsd:string {comment="Brauer F. Compartmental Models in Epidemiology. Mathematical Epidemiology. 2008;1945:19-79."}
+property_value: skos:altLabel "SIS" xsd:string
+property_value: skos:altLabel "susceptible-infectious-susceptible" xsd:string
+property_value: skos:altLabel "susceptible-infectious-susceptible model" xsd:string
+property_value: skos:definition "A compartmental epidemiological model with two compartments: susceptible S and infectious I. The passage of individuals is modelled from S to I and back." xsd:string
+property_value: skos:prefLabel "SIS model" xsd:string
+
+[Term]
+id: mamo:MAMO_0000209
+is_a: mamo:MAMO_0000206
+property_value: seeAlso "http://identifiers.org/doi/10.1007/978-3-540-78911-6_2" xsd:string {comment="Brauer F. Compartmental Models in Epidemiology. Mathematical Epidemiology. 2008;1945:19-79."}
+property_value: skos:altLabel "SEIR" xsd:string
+property_value: skos:altLabel "susceptible-exposed-infectious-recovered" xsd:string
+property_value: skos:altLabel "susceptible-exposed-infectious-recovered model" xsd:string
+property_value: skos:definition "A compartmental epidemiological model with four compartments: susceptible S, exposed E, infectious I, and removed R. The passage of individuals is modelled from S to E to I to R." xsd:string
+property_value: skos:prefLabel "SEIR model" xsd:string
+
+[Term]
+id: mamo:MAMO_0000210
+is_a: mamo:MAMO_0000206
+property_value: seeAlso "http://identifiers.org/doi/10.1007/978-3-540-78911-6_2" xsd:string {comment="Brauer F. Compartmental Models in Epidemiology. Mathematical Epidemiology. 2008;1945:19-79."}
+property_value: skos:altLabel "SEIS" xsd:string
+property_value: skos:altLabel "susceptible-exposed-infectious-susceptible" xsd:string
+property_value: skos:altLabel "susceptible-exposed-infectious-susceptible model" xsd:string
+property_value: skos:definition "A compartmental epidemiological model with three compartments: susceptible S, exposed E, and infectious I. The passage of individuals is modelled from S to E to I to S." xsd:string
+property_value: skos:prefLabel "SEIS model" xsd:string
+
+[Term]
+id: mamo:MAMO_0000211
+is_a: MAMO:0000181
+property_value: seeAlso "http://identifiers.org/pubmed/11185661" xsd:string {comment="Derendorf H, Lesko LJ, Chaikin P, Colburn WA, Lee P, Miller R, Powell R, Rhodes G, Stanski D, Venitz J. Pharmacokinetic/pharmacodynamic modeling in drug research and development. J Clin Pharmacol. 2000 Dec;40(12 Pt 2):1399-418."}
+property_value: skos:altLabel "PK-PD model" xsd:string
+property_value: skos:definition "Pharmacokinetic/pharmacodynamic (PK/PD) relationships and modeling builds the bridge between the two classical disciplines of clinical pharmacology: pharmacokinetics and pharmacodynamics. It links the concentration-time profile as assessed by pharmacokinetics to the intensity of observed response as quantified by pharmacodynamics. The resulting so-called integrated PK/PD-models allow the description of the complete time course of the desired and/or undesired effects in response to a drug therapy." xsd:string
+property_value: skos:prefLabel "pharmacokinetic-pharmacodynamic model" xsd:string
+
+[Term]
+id: mamo:continuous_variable
+is_a: MAMO:0000086
+property_value: skos:definition "statistical data whose individual element can take any real number value." xsd:string
+property_value: skos:prefLabel "continuous data variable" xsd:string
+
+[Term]
+id: mamo:ordinal_variable
+is_a: MAMO:0000086
+property_value: seeAlso "https://en.wikipedia.org/wiki/Ordinal_data" xsd:string
+property_value: skos:altLabel "ordinal categorical data variable" xsd:string
+property_value: skos:definition "statistical variable whose elements take values that exist on an ordinal scale, i.e. an arbitrary numerical scale where the exact numerical quantity of a particular value has no significance beyond its ability to establish a ranking over a set of data points." xsd:string
+property_value: skos:prefLabel "ordinal data variable" xsd:string
+
+[Typedef]
+id: mamo:hasFeature
+property_value: skos:prefLabel "hasFeature" xsd:string
+range: MAMO:0000054
+disjoint_from: mamo:lacksFeature
+
+[Typedef]
+id: mamo:isUsedToModel
+property_value: skos:prefLabel "isUsedToModel" xsd:string
+domain: MAMO:0000003
+range: MAMO:0000180
+
+[Typedef]
+id: mamo:lacksFeature
+property_value: mamo:owlDef "?X subclassOf: not (hasFeature some ?Y)" xsd:string
+property_value: skos:definition "An object property to be used in the OBO version of MAMO to express negation." xsd:string
+property_value: skos:prefLabel "lacksFeature" xsd:string
+range: MAMO:0000054
+

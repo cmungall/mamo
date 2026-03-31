@@ -1,0 +1,2042 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.obolibrary.org/obo/mamo/mamo-full.owl#"
+     xml:base="http://purl.obolibrary.org/obo/mamo/mamo-full.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:mamo="http://identifiers.org/mamo#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/mamo/mamo-full.owl">
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/mamo/releases/2026-03-31/mamo-full.owl"/>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-02-03</owl:versionInfo>
+        <owl:versionInfo>2026-03-31</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://identifiers.org/mamo#owlDef -->
+
+    <owl:AnnotationProperty rdf:about="http://identifiers.org/mamo#owlDef">
+        <skos:prefLabel xml:lang="en">owlDef</skos:prefLabel>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel">
+        <rdfs:comment xml:lang="en">The range of skos:altLabel is the class of RDF plain literals.</rdfs:comment>
+        <rdfs:comment xml:lang="en">skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise disjoint properties.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/2004/02/skos/core</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">alternative label</rdfs:label>
+        <skos:definition xml:lang="en">An alternative lexical label for a resource.</skos:definition>
+        <skos:example xml:lang="en">Acronyms, abbreviations, spelling variants, and irregular plural/singular forms may be included among the alternative labels for a concept. Mis-spelled terms are normally included as hidden labels (see skos:hiddenLabel).</skos:example>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition">
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/2004/02/skos/core</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">definition</rdfs:label>
+        <skos:definition xml:lang="en">A statement or formal explanation of the meaning of a concept.</skos:definition>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#example -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#example">
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/2004/02/skos/core</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">example</rdfs:label>
+        <skos:definition xml:lang="en">An example of the use of a concept.</skos:definition>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#hiddenLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#hiddenLabel">
+        <rdfs:comment xml:lang="en">skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise disjoint properties.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/2004/02/skos/core</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">hidden label</rdfs:label>
+        <skos:definition xml:lang="en">A lexical label for a resource that should be hidden when generating visual displays of the resource, but should still be accessible to free text search operations.</skos:definition>
+        <skos:example xml:lang="en">The range of skos:hiddenLabel is the class of RDF plain literals.</skos:example>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel">
+        <rdfs:comment xml:lang="en">A resource has no more than one value of skos:prefLabel per language tag, and no more than one value of skos:prefLabel without language tag.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The range of skos:prefLabel is the class of RDF plain literals.</rdfs:comment>
+        <rdfs:comment xml:lang="en">skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise
+      disjoint properties.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/2004/02/skos/core</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">preferred label</rdfs:label>
+        <skos:definition xml:lang="en">The preferred lexical label for a resource, in a given language.</skos:definition>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://identifiers.org/mamo#hasFeature -->
+
+    <owl:ObjectProperty rdf:about="http://identifiers.org/mamo#hasFeature">
+        <rdfs:range rdf:resource="http://identifiers.org/mamo/MAMO_0000054"/>
+        <owl:propertyDisjointWith rdf:resource="http://identifiers.org/mamo#lacksFeature"/>
+        <skos:prefLabel xml:lang="en">hasFeature</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://identifiers.org/mamo#isUsedToModel -->
+
+    <owl:ObjectProperty rdf:about="http://identifiers.org/mamo#isUsedToModel">
+        <rdfs:domain rdf:resource="http://identifiers.org/mamo/MAMO_0000003"/>
+        <rdfs:range rdf:resource="http://identifiers.org/mamo/MAMO_0000180"/>
+        <skos:prefLabel xml:lang="en">isUsedToModel</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://identifiers.org/mamo#lacksFeature -->
+
+    <owl:ObjectProperty rdf:about="http://identifiers.org/mamo#lacksFeature">
+        <rdfs:range rdf:resource="http://identifiers.org/mamo/MAMO_0000054"/>
+        <mamo:owlDef xml:lang="en">?X subclassOf: not (hasFeature some ?Y)</mamo:owlDef>
+        <skos:definition xml:lang="en">An object property to be used in the OBO version of MAMO to express negation.</skos:definition>
+        <skos:prefLabel xml:lang="en">lacksFeature</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://identifiers.org/mamo#MAMO_0000206 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo#MAMO_0000206">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000028"/>
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000180"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://identifiers.org/mamo#hasFeature"/>
+                <owl:someValuesFrom rdf:resource="http://identifiers.org/mamo/MAMO_0000064"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:seeAlso xml:lang="en">http://identifiers.org/doi/10.1007/978-3-540-78911-6_2</rdfs:seeAlso>
+        <rdfs:seeAlso xml:lang="en">https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology</rdfs:seeAlso>
+        <skos:definition xml:lang="en">Compartmental models simplify the mathematical modelling of infectious diseases. The population is assigned to compartments with labels - for example, S, I, or R, (Susceptible, Infectious, or Recovered). People may progress between compartments. The order of the labels usually shows the flow patterns between the compartments; for example SEIS means susceptible, exposed, infectious, then susceptible again.</skos:definition>
+        <skos:prefLabel xml:lang="en">epidemiological compartmental model</skos:prefLabel>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://identifiers.org/mamo#MAMO_0000206"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+        <owl:annotatedTarget xml:lang="en">http://identifiers.org/doi/10.1007/978-3-540-78911-6_2</owl:annotatedTarget>
+        <rdfs:comment xml:lang="en">Brauer F. Compartmental Models in Epidemiology. Mathematical Epidemiology. 2008;1945:19-79.</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://identifiers.org/mamo#MAMO_0000207 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo#MAMO_0000207">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo#MAMO_0000206"/>
+        <rdfs:seeAlso xml:lang="en">http://identifiers.org/doi/10.1007/978-3-540-78911-6_2</rdfs:seeAlso>
+        <rdfs:seeAlso xml:lang="en">http://identifiers.org/doi/10.1098/rspa.1927.0118</rdfs:seeAlso>
+        <skos:altLabel xml:lang="en">SIR</skos:altLabel>
+        <skos:altLabel xml:lang="en">susceptible-infectious-removed</skos:altLabel>
+        <skos:altLabel xml:lang="en">susceptible-infectious-removed model</skos:altLabel>
+        <skos:definition xml:lang="en">A compartmental epidemiological model with three compartments: susceptible S, infectious I, and removed R. The passage of individuals is modelled from S to I to R.</skos:definition>
+        <skos:prefLabel xml:lang="en">SIR model</skos:prefLabel>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://identifiers.org/mamo#MAMO_0000207"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+        <owl:annotatedTarget xml:lang="en">http://identifiers.org/doi/10.1007/978-3-540-78911-6_2</owl:annotatedTarget>
+        <rdfs:comment xml:lang="en">Brauer F. Compartmental Models in Epidemiology. Mathematical Epidemiology. 2008;1945:19-79.</rdfs:comment>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://identifiers.org/mamo#MAMO_0000207"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+        <owl:annotatedTarget xml:lang="en">http://identifiers.org/doi/10.1098/rspa.1927.0118</owl:annotatedTarget>
+        <rdfs:comment xml:lang="en">Kermack, W. O. and McKendrick, A. G. &quot;A Contribution to the Mathematical Theory of Epidemics.&quot; Proc. Roy. Soc. Lond. A 115, 700-721, 1927.</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://identifiers.org/mamo#MAMO_0000208 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo#MAMO_0000208">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo#MAMO_0000206"/>
+        <rdfs:seeAlso xml:lang="en">http://identifiers.org/doi/10.1007/978-3-540-78911-6_2</rdfs:seeAlso>
+        <skos:altLabel xml:lang="en">SIS</skos:altLabel>
+        <skos:altLabel xml:lang="en">susceptible-infectious-susceptible</skos:altLabel>
+        <skos:altLabel xml:lang="en">susceptible-infectious-susceptible model</skos:altLabel>
+        <skos:definition xml:lang="en">A compartmental epidemiological model with two compartments: susceptible S and infectious I. The passage of individuals is modelled from S to I and back.</skos:definition>
+        <skos:prefLabel xml:lang="en">SIS model</skos:prefLabel>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://identifiers.org/mamo#MAMO_0000208"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+        <owl:annotatedTarget xml:lang="en">http://identifiers.org/doi/10.1007/978-3-540-78911-6_2</owl:annotatedTarget>
+        <rdfs:comment xml:lang="en">Brauer F. Compartmental Models in Epidemiology. Mathematical Epidemiology. 2008;1945:19-79.</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://identifiers.org/mamo#MAMO_0000209 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo#MAMO_0000209">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo#MAMO_0000206"/>
+        <rdfs:seeAlso xml:lang="en">http://identifiers.org/doi/10.1007/978-3-540-78911-6_2</rdfs:seeAlso>
+        <skos:altLabel xml:lang="en">SEIR</skos:altLabel>
+        <skos:altLabel xml:lang="en">susceptible-exposed-infectious-recovered</skos:altLabel>
+        <skos:altLabel xml:lang="en">susceptible-exposed-infectious-recovered model</skos:altLabel>
+        <skos:definition xml:lang="en">A compartmental epidemiological model with four compartments: susceptible S, exposed E, infectious I, and removed R. The passage of individuals is modelled from S to E to I to R.</skos:definition>
+        <skos:prefLabel xml:lang="en">SEIR model</skos:prefLabel>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://identifiers.org/mamo#MAMO_0000209"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+        <owl:annotatedTarget xml:lang="en">http://identifiers.org/doi/10.1007/978-3-540-78911-6_2</owl:annotatedTarget>
+        <rdfs:comment xml:lang="en">Brauer F. Compartmental Models in Epidemiology. Mathematical Epidemiology. 2008;1945:19-79.</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://identifiers.org/mamo#MAMO_0000210 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo#MAMO_0000210">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo#MAMO_0000206"/>
+        <rdfs:seeAlso xml:lang="en">http://identifiers.org/doi/10.1007/978-3-540-78911-6_2</rdfs:seeAlso>
+        <skos:altLabel xml:lang="en">SEIS</skos:altLabel>
+        <skos:altLabel xml:lang="en">susceptible-exposed-infectious-susceptible</skos:altLabel>
+        <skos:altLabel xml:lang="en">susceptible-exposed-infectious-susceptible model</skos:altLabel>
+        <skos:definition xml:lang="en">A compartmental epidemiological model with three compartments: susceptible S, exposed E, and infectious I. The passage of individuals is modelled from S to E to I to S.</skos:definition>
+        <skos:prefLabel xml:lang="en">SEIS model</skos:prefLabel>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://identifiers.org/mamo#MAMO_0000210"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+        <owl:annotatedTarget xml:lang="en">http://identifiers.org/doi/10.1007/978-3-540-78911-6_2</owl:annotatedTarget>
+        <rdfs:comment xml:lang="en">Brauer F. Compartmental Models in Epidemiology. Mathematical Epidemiology. 2008;1945:19-79.</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://identifiers.org/mamo#MAMO_0000211 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo#MAMO_0000211">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000181"/>
+        <rdfs:seeAlso xml:lang="en">http://identifiers.org/pubmed/11185661</rdfs:seeAlso>
+        <skos:altLabel xml:lang="en">PK-PD model</skos:altLabel>
+        <skos:definition xml:lang="en">Pharmacokinetic/pharmacodynamic (PK/PD) relationships and modeling builds the bridge between the two classical disciplines of clinical pharmacology: pharmacokinetics and pharmacodynamics. It links the concentration-time profile as assessed by pharmacokinetics to the intensity of observed response as quantified by pharmacodynamics. The resulting so-called integrated PK/PD-models allow the description of the complete time course of the desired and/or undesired effects in response to a drug therapy.</skos:definition>
+        <skos:prefLabel xml:lang="en">pharmacokinetic-pharmacodynamic model</skos:prefLabel>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://identifiers.org/mamo#MAMO_0000211"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+        <owl:annotatedTarget xml:lang="en">http://identifiers.org/pubmed/11185661</owl:annotatedTarget>
+        <rdfs:comment xml:lang="en">Derendorf H, Lesko LJ, Chaikin P, Colburn WA, Lee P, Miller R, Powell R, Rhodes G, Stanski D, Venitz J. Pharmacokinetic/pharmacodynamic modeling in drug research and development. J Clin Pharmacol. 2000 Dec;40(12 Pt 2):1399-418.</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://identifiers.org/mamo#continuous_variable -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo#continuous_variable">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000086"/>
+        <skos:definition>statistical data whose individual element can take any real number value.</skos:definition>
+        <skos:prefLabel>continuous data variable</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo#ordinal_variable -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo#ordinal_variable">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000086"/>
+        <rdfs:seeAlso>https://en.wikipedia.org/wiki/Ordinal_data</rdfs:seeAlso>
+        <skos:altLabel>ordinal categorical data variable</skos:altLabel>
+        <skos:definition>statistical variable whose elements take values that exist on an ordinal scale, i.e. an arbitrary numerical scale where the exact numerical quantity of a particular value has no significance beyond its ability to establish a ranking over a set of data points.</skos:definition>
+        <skos:prefLabel>ordinal data variable</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000003 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000003">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000037"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Mathematical_model</rdfs:seeAlso>
+        <skos:definition xml:lang="en">Description of a system using mathematical concepts and language.  The model is composed of a set of variables and a set of equations that establish relationships between the variables. </skos:definition>
+        <skos:example xml:lang="en">A set of ordinary differential equation describing a physical process.</skos:example>
+        <skos:prefLabel xml:lang="en">mathematical model</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000004 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000004">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000003"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://identifiers.org/mamo#hasFeature"/>
+                <owl:someValuesFrom rdf:resource="http://identifiers.org/mamo/MAMO_0000058"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Statistical_model</rdfs:seeAlso>
+        <skos:definition xml:lang="en">Model that describes how one or more random variables are related to one or more random variables.</skos:definition>
+        <skos:example xml:lang="en">The relationship between the size and the age.</skos:example>
+        <skos:prefLabel xml:lang="en">statistical model</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000008 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000008">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000003"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://identifiers.org/mamo#hasFeature"/>
+                <owl:someValuesFrom rdf:resource="http://identifiers.org/mamo/MAMO_0000056"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Steady_state_%28chemistry%29</rdfs:seeAlso>
+        <skos:definition xml:lang="en">Model which describes a system where the state variable values do not vary.</skos:definition>
+        <skos:prefLabel xml:lang="en">steady-state model</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000009 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000009">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000008"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://identifiers.org/mamo#hasFeature"/>
+                <owl:someValuesFrom rdf:resource="http://identifiers.org/mamo/MAMO_0000058"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Can be analysed using flux balance analysis [http://identifiers.org/biomodels.kisao/KISAO_0000437].</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://identifiers.org/pubmed/12700248</rdfs:seeAlso>
+        <skos:definition xml:lang="en">The constraint-based modeling procedure does not strive to find a single solution but rather finds a collection of all allowable solutions to the governing equations that can be defined (a solution space). The subsequent application of additional constraints further reduces the solution space and, consequently, reduces the number of allowable solutions that a cell can utilize.</skos:definition>
+        <skos:prefLabel xml:lang="en">constraint-based model</skos:prefLabel>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://identifiers.org/mamo/MAMO_0000009"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://identifiers.org/pubmed/12700248</owl:annotatedTarget>
+        <rdfs:comment xml:lang="en">Reed JL, Palsson BO (2003) Thirteen years of building constraint-based in silico models of Escherichia coli. J Bacteriol, 185(9):2692-9.
+</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000010 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000010">
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Variable_%28mathematics%29</rdfs:seeAlso>
+        <skos:definition xml:lang="en">Value that may change within the scope of a given model or set of operations.</skos:definition>
+        <skos:prefLabel xml:lang="en">variable</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000017 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000017">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000010"/>
+        <owl:disjointWith rdf:resource="http://identifiers.org/mamo/MAMO_0000018"/>
+        <rdfs:comment xml:lang="en">Synonyms: input variable</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Dependent_and_independent_variables;</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.ncsu.edu/labwrite/po/independentvar.htm</rdfs:seeAlso>
+        <skos:definition xml:lang="en">variable which is controlled in an experiment, and that affects other variables during the experiment. An independent variable does not depend on other variables of the model.</skos:definition>
+        <skos:prefLabel xml:lang="en">independent variable</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000018 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000018">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000010"/>
+        <rdfs:comment xml:lang="en">Synonyms: output variable</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Dependent_and_independent_variables;</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.ncsu.edu/labwrite/po/dependentvar.htm</rdfs:seeAlso>
+        <skos:definition xml:lang="en">variable which is measured in an experiment, and that is affected during the experiment. A dependent variable depends on other variables</skos:definition>
+        <skos:example xml:lang="en">Example: in an experiment one controls x and measure y, with a relationship y = ax+b, y is depending on x.</skos:example>
+        <skos:prefLabel xml:lang="en">dependent variable</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000019 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000019">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000181"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://identifiers.org/mamo#hasFeature"/>
+                <owl:someValuesFrom rdf:resource="http://identifiers.org/mamo/MAMO_0000058"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://identifiers.org/mamo/MAMO_0000020"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Pharmacokinetics</rdfs:seeAlso>
+        <skos:altLabel xml:lang="en">pharmacokinetics model</skos:altLabel>
+        <skos:definition xml:lang="en">Model dedicated to the determination of the fate of substances administered externally to a living organism. Pharmacokinetics models are divided into several areas including the extent and rate of absorption, distribution, metabolism and excretion (ADME) to which Liberation is sometimes added (LADME).</skos:definition>
+        <skos:prefLabel xml:lang="en">pharmacokinetic model</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000020 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000020">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000181"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://identifiers.org/mamo#hasFeature"/>
+                <owl:someValuesFrom rdf:resource="http://identifiers.org/mamo/MAMO_0000058"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Pharmacodynamics</rdfs:seeAlso>
+        <skos:altLabel xml:lang="en">pharmacodynamics model</skos:altLabel>
+        <skos:definition xml:lang="en">Models dedicated to the study of the biochemical and physiological effects of drugs on the body or on microorganisms or parasites within or on the body and the mechanisms of drug action and the relationship between drug concentration and effect.</skos:definition>
+        <skos:prefLabel xml:lang="en">pharmacodynamic model</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000021 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000021">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000180"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://identifiers.org/mamo#hasFeature"/>
+                <owl:someValuesFrom rdf:resource="http://identifiers.org/mamo/MAMO_0000058"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Multiphysics</rdfs:seeAlso>
+        <skos:definition xml:lang="en">Multiphysics treats simulations that involve multiple physical models or multiple simultaneous physical phenomena. For example, combining chemical kinetics and fluid mechanics or combining finite elements with molecular dynamics. Multiphysics typically involves solving coupled systems of partial differential equations.</skos:definition>
+        <skos:prefLabel xml:lang="en">multiphysics model</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000022 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000022">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000003"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://identifiers.org/mamo#hasFeature"/>
+                        <owl:someValuesFrom rdf:resource="http://identifiers.org/mamo/MAMO_0000058"/>
+                    </owl:Restriction>
+                </owl:complementOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://identifiers.org/mamo#hasFeature"/>
+                <owl:someValuesFrom rdf:resource="http://identifiers.org/mamo/MAMO_0000064"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Rule-based modeling is especially effective in cases where the rule-set is significantly simpler than the model it implies, meaning that the model is a repeated manifestation of a limited number of patterns. </rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Rule-based_modeling#For_biochemical_systems</rdfs:seeAlso>
+        <skos:definition xml:lang="en">Model that uses a set of rules used to describe other model instances. The rule-set can be used to create a model, or suitable tools can use a rule-set in place of a model. </skos:definition>
+        <skos:prefLabel xml:lang="en">rule-based model</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000023 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000023">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000003"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Computational_model</rdfs:seeAlso>
+        <skos:definition xml:lang="en">mathematical model that requires computer simulations to study the behavior of a complex system. The system under study is often a complex nonlinear system for which simple, intuitive analytical solutions are not readily available. Rather than deriving a mathematical analytical solution to the problem, experimentation with the model is done by adjusting the parameters of the system in the computer, and studying the differences in the outcome of the experiments. </skos:definition>
+        <skos:example xml:lang="en">weather forecasting models, earth simulator models, flight simulator models, molecular protein folding models, neural network models.</skos:example>
+        <skos:prefLabel xml:lang="en">computational model</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000024 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000024">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000023"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://identifiers.org/mamo#hasFeature"/>
+                <owl:someValuesFrom rdf:resource="http://identifiers.org/mamo/MAMO_0000059"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://identifiers.org/mamo#hasFeature"/>
+                <owl:someValuesFrom rdf:resource="http://identifiers.org/mamo/MAMO_0000064"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Synonym: multi-agent model</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Agent-based_model</rdfs:seeAlso>
+        <skos:definition xml:lang="en">model simulating the actions and interactions of autonomous agents (both individual or collective entities such as organizations or groups) with a view to assessing their effects on the system as a whole</skos:definition>
+        <skos:prefLabel xml:lang="en">agent-based model</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000025 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000025">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000003"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://identifiers.org/mamo#hasFeature"/>
+                <owl:someValuesFrom rdf:resource="http://identifiers.org/mamo/MAMO_0000057"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Petri_net</rdfs:seeAlso>
+        <skos:definition xml:lang="en">directed bipartite graph, in which the nodes represent transitions (i.e. events that may occur, signified by bars) and places (i.e. conditions, signified by circles). The directed arcs describe which places are pre- and/or postconditions for which transitions (signified by arrows) occurs.</skos:definition>
+        <skos:prefLabel xml:lang="en">Petri net</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000026 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000026">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000180"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://identifiers.org/mamo#hasFeature"/>
+                <owl:someValuesFrom rdf:resource="http://identifiers.org/mamo/MAMO_0000056"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Computational_neuroscience</rdfs:seeAlso>
+        <skos:definition xml:lang="en">Computational Neuroscience emphasizes descriptions of functional and biologically realistic neurons (and neural systems) and their physiology and dynamics. These models capture the essential features of the biological system at multiple spatial-temporal scales, from membrane currents, protein, and chemical coupling to network oscillations, columnar and topographic architecture, and learning and memory. These computational models are used to frame hypotheses that can be directly tested by current or future biological and/or psychological experiments.</skos:definition>
+        <skos:prefLabel xml:lang="en">computational Neuroscience model</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000027 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000027">
+        <skos:definition xml:lang="en">information obtained about a system by the application of an analysis procedure to a model of this system</skos:definition>
+        <skos:example xml:lang="en">timecourse of a concentation; EC50</skos:example>
+        <skos:prefLabel xml:lang="en">readout</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000028 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000028">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000003"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://identifiers.org/mamo#hasFeature"/>
+                <owl:someValuesFrom rdf:resource="http://identifiers.org/mamo/MAMO_0000058"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Population_models</rdfs:seeAlso>
+        <skos:definition xml:lang="en">type of mathematical model that is applied to the study of population dynamics. </skos:definition>
+        <skos:prefLabel xml:lang="en">population model</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000029 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000029">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000028"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Matrix_population_models</rdfs:seeAlso>
+        <skos:definition xml:lang="en">specific type of population model that uses matrix algebra. Matrix algebra, in turn, is simply a form of algebraic shorthand for summarizing a larger number of often repetitious and tedious algebraic computations.</skos:definition>
+        <skos:prefLabel xml:lang="en">matrix population model</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000030 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000030">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000003"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://identifiers.org/mamo#hasFeature"/>
+                        <owl:someValuesFrom rdf:resource="http://identifiers.org/mamo/MAMO_0000058"/>
+                    </owl:Restriction>
+                </owl:complementOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Algebraic_logic</rdfs:seeAlso>
+        <skos:altLabel xml:lang="en">algebraic logic model</skos:altLabel>
+        <skos:altLabel xml:lang="en">logic model</skos:altLabel>
+        <skos:definition xml:lang="en">model where the discrete values of variables (also called levels) is determined by logical combinations of the values of other variables.</skos:definition>
+        <skos:prefLabel xml:lang="en">logical model</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000031 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000031">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000027"/>
+        <skos:definition xml:lang="en">evolution of a variable value over time</skos:definition>
+        <skos:prefLabel xml:lang="en">timecourse</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000032 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000032">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000054"/>
+        <skos:definition xml:lang="en">model which take into account the spatial distribution or geometric characteristics of the entities described by its variables.</skos:definition>
+        <skos:prefLabel xml:lang="en">spatial characteristic</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000033 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000033">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000180"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://identifiers.org/mamo#hasFeature"/>
+                <owl:someValuesFrom rdf:resource="http://identifiers.org/mamo/MAMO_0000056"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Reaction_diffusion_model</rdfs:seeAlso>
+        <skos:definition xml:lang="en">mathematical model which explains how the concentration of one or more substances distributed in space changes under the influence of two processes: local chemical reactions in which the substances are transformed into each other, and diffusion which causes the substances to spread out over a domain in space.</skos:definition>
+        <skos:prefLabel xml:lang="en">chemical reaction diffusion model</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000034 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000034">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000033"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Finite_Element_Method</rdfs:seeAlso>
+        <skos:definition xml:lang="en">model where the space is split into a number of subspaces (sometimes called voxels) that are each considered homegenous and isotropic.</skos:definition>
+        <skos:prefLabel xml:lang="en">finite element spatial model</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000035 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000035">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000180"/>
+        <skos:definition>model based on a network of nodes or vertices, linked by edges or arcs. nodes can be physical entities, processes, events or logic operators. Edges can represent fluxs, interactions, influences etc.</skos:definition>
+        <skos:prefLabel xml:lang="en">network model</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000036 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000036">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000035"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Biochemical_system</rdfs:seeAlso>
+        <skos:definition xml:lang="en">Biochemical network studies chemical processes within and relating to, living organisms.</skos:definition>
+        <skos:prefLabel xml:lang="en">biochemical network</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000037 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000037">
+        <skos:altLabel xml:lang="en">model</skos:altLabel>
+        <skos:definition xml:lang="en">Purposeful simplification of reality, designed to imitate certain phenomena or characteristics of a system while downplaying non-essential aspects. Its value lies in the ability to generalise insights from the model to a broader class of systems.</skos:definition>
+        <skos:prefLabel xml:lang="en">model</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000038 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000038">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000036"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://identifiers.org/pubmed/19897097</rdfs:seeAlso>
+        <skos:definition xml:lang="en">Signal transduction is a process for cellular communication where the cell receives (and responds to) external stimuli from other cells and from the environment.</skos:definition>
+        <skos:prefLabel xml:lang="en">signalling network</skos:prefLabel>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://identifiers.org/mamo/MAMO_0000038"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://identifiers.org/pubmed/19897097</owl:annotatedTarget>
+        <rdfs:comment xml:lang="en">Albert R, Wang R (2009) Discrete dynamic modeling of cellular signaling networks. Methods Enzymol 467:281–306</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000039 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000039">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000036"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://identifiers.org/pubmed/17903290</rdfs:seeAlso>
+        <skos:definition xml:lang="en">Gene regulation controls the expression of genes and, consequently, all cellular functions. Gene expression is a process that involves transcription of the gene into mRNA, followed by translation to a protein, which may be subject to post-translational modification. The transcription process is controlled by transcription factors (TFs) that can work as activators or inhibitors. TFs are themselves encoded by genes and subject to regulation, which altogether forms complex regulatory networks.</skos:definition>
+        <skos:prefLabel xml:lang="en">gene regulatory network</skos:prefLabel>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://identifiers.org/mamo/MAMO_0000039"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://identifiers.org/pubmed/17903290</owl:annotatedTarget>
+        <rdfs:comment xml:lang="en">Schlitt T, Brazma A (2007) Current approaches to gene regulatory network modelling. BMC Bioinf 8(Suppl 6):S9</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000040 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000040">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000036"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://identifiers.org/isbn/9780521859035</rdfs:seeAlso>
+        <skos:definition xml:lang="en">Metabolism is a mechanism composed by a set of biochemical reactions, by which the cell sustains its growth and energy requirements. It includes several catabolic and anabolic pathways of enzyme-catalyzed reactions that import substrates from the environment and transform them into energy and building blocks required to build the cellular components. Metabolic pathways are interconnected through intermediate metabolites, forming complex networks.</skos:definition>
+        <skos:prefLabel xml:lang="en">metabolic network</skos:prefLabel>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://identifiers.org/mamo/MAMO_0000040"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://identifiers.org/isbn/9780521859035</owl:annotatedTarget>
+        <rdfs:comment xml:lang="en">Palsson B (2006) Systems Biology: Properties of Reconstructed Networks.
+Cambridge University Press</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000041 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000041">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000003"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://identifiers.org/mamo#hasFeature"/>
+                        <owl:someValuesFrom rdf:resource="http://identifiers.org/mamo/MAMO_0000058"/>
+                    </owl:Restriction>
+                </owl:complementOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://identifiers.org/mamo#hasFeature"/>
+                <owl:someValuesFrom rdf:resource="http://identifiers.org/mamo/MAMO_0000064"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://identifiers.org/mamo#isUsedToModel"/>
+                <owl:someValuesFrom rdf:resource="http://identifiers.org/mamo/MAMO_0000038"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://identifiers.org/mamo#isUsedToModel"/>
+                <owl:someValuesFrom rdf:resource="http://identifiers.org/mamo/MAMO_0000039"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Bayesian_network</rdfs:seeAlso>
+        <skos:altLabel xml:lang="en">Bayes model</skos:altLabel>
+        <skos:altLabel xml:lang="en">Bayes network</skos:altLabel>
+        <skos:altLabel xml:lang="en">Bayesian network</skos:altLabel>
+        <skos:altLabel xml:lang="en">belief network</skos:altLabel>
+        <skos:altLabel xml:lang="en">probabilistic DAG model</skos:altLabel>
+        <skos:altLabel xml:lang="en">probabilistic directed acyclic graphical model</skos:altLabel>
+        <skos:definition xml:lang="en">Bayesian networks are a special type of probabilistic graphs. Their nodes represent random variables (discrete or continuous) and the edges represent conditional dependencies, forming a directed acyclic graph. Each node contains a probabilistic function that is dependent on the values of its input nodes.</skos:definition>
+        <skos:prefLabel xml:lang="en">Bayesian model</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000043 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000043">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000041"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://identifiers.org/mamo#hasFeature"/>
+                <owl:someValuesFrom rdf:resource="http://identifiers.org/mamo/MAMO_0000056"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://identifiers.org/pubmed/15308537</rdfs:seeAlso>
+        <skos:altLabel xml:lang="en">dynamic Bayes model</skos:altLabel>
+        <skos:altLabel xml:lang="en">dynamic Bayes network</skos:altLabel>
+        <skos:altLabel xml:lang="en">dynamic Bayesian network</skos:altLabel>
+        <skos:altLabel xml:lang="en">dynamic belief network</skos:altLabel>
+        <skos:altLabel xml:lang="en">dynamic probabilistic DAG model</skos:altLabel>
+        <skos:altLabel xml:lang="en">dynamic probabilistic directed acyclic graphical model</skos:altLabel>
+        <skos:definition xml:lang="en">A dynamic Bayesian network is a Bayesian network that overcomes the inability to model feedback loops. In this case, the variables are replicated for each time step and the feedback is modeled by connecting the nodes at adjacent time steps.</skos:definition>
+        <skos:prefLabel xml:lang="en">dynamic Bayesian model</skos:prefLabel>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://identifiers.org/mamo/MAMO_0000043"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://identifiers.org/pubmed/15308537</owl:annotatedTarget>
+        <rdfs:comment xml:lang="en">Zou M, Conzen S (2005) A new dynamic Bayesian network (DBN) approach for identifying gene regulatory networks from time course microarray data. Bioinformatics 21(1):71–79</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000044 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000044">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000003"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://identifiers.org/mamo#hasFeature"/>
+                        <owl:someValuesFrom rdf:resource="http://identifiers.org/mamo/MAMO_0000058"/>
+                    </owl:Restriction>
+                </owl:complementOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://identifiers.org/mamo#hasFeature"/>
+                <owl:someValuesFrom rdf:resource="http://identifiers.org/mamo/MAMO_0000064"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Process_calculus</rdfs:seeAlso>
+        <skos:altLabel xml:lang="en">process calculus</skos:altLabel>
+        <skos:definition xml:lang="en">Process algebras are a family of formal languages for modeling concurrent systems. They generally consist on a set of process primitives, operators for sequential and parallel composition of processes, and communication channels.</skos:definition>
+        <skos:prefLabel xml:lang="en">process algebra</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000045 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000045">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000003"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://identifiers.org/mamo#hasFeature"/>
+                <owl:someValuesFrom rdf:resource="http://identifiers.org/mamo/MAMO_0000060"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://identifiers.org/mamo#isUsedToModel"/>
+                <owl:someValuesFrom rdf:resource="http://identifiers.org/mamo/MAMO_0000038"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://identifiers.org/mamo#isUsedToModel"/>
+                <owl:someValuesFrom rdf:resource="http://identifiers.org/mamo/MAMO_0000039"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://identifiers.org/mamo#isUsedToModel"/>
+                <owl:someValuesFrom rdf:resource="http://identifiers.org/mamo/MAMO_0000040"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Differential_equation</rdfs:seeAlso>
+        <skos:altLabel xml:lang="en">differential equations model</skos:altLabel>
+        <skos:altLabel xml:lang="en">model based on differential equations</skos:altLabel>
+        <skos:altLabel xml:lang="en">model using differential equations</skos:altLabel>
+        <skos:definition xml:lang="en">Differential equations describe the rate of change of continuous variables. They are typically used for modeling dynamical systems in several areas.</skos:definition>
+        <skos:prefLabel xml:lang="en">differential equation model</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000046 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000046">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000045"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://identifiers.org/mamo#hasFeature"/>
+                <owl:someValuesFrom rdf:resource="http://identifiers.org/mamo/MAMO_0000063"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Ordinary_differential_equation</rdfs:seeAlso>
+        <skos:altLabel xml:lang="en">ODE model</skos:altLabel>
+        <skos:altLabel xml:lang="en">model based on ordinary differential equations</skos:altLabel>
+        <skos:altLabel xml:lang="en">model using ordinary differential equation</skos:altLabel>
+        <skos:altLabel xml:lang="en">ordinary differential equations model</skos:altLabel>
+        <skos:definition xml:lang="en">model using equations containing a function of one independent variable and its derivatives.</skos:definition>
+        <skos:prefLabel xml:lang="en">ordinary differential equation model</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000047 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000047">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000045"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://identifiers.org/mamo#hasFeature"/>
+                <owl:someValuesFrom rdf:resource="http://identifiers.org/mamo/MAMO_0000064"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Stochastic_differential_equation</rdfs:seeAlso>
+        <skos:altLabel xml:lang="en">SDE model</skos:altLabel>
+        <skos:altLabel xml:lang="en">model based on stochastic differential equations</skos:altLabel>
+        <skos:altLabel xml:lang="en">model using stochastic differential equations</skos:altLabel>
+        <skos:altLabel xml:lang="en">stochastic differential equations model</skos:altLabel>
+        <skos:definition xml:lang="en">model using differential equations in which one or more of the terms is a stochastic process, resulting in a solution which is itself a stochastic process</skos:definition>
+        <skos:prefLabel xml:lang="en">stochastic differential equation model</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000048 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000048">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000045"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://identifiers.org/mamo#hasFeature"/>
+                <owl:someValuesFrom rdf:resource="http://identifiers.org/mamo/MAMO_0000063"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Partial_differential_equation</rdfs:seeAlso>
+        <skos:altLabel xml:lang="en">PDE model</skos:altLabel>
+        <skos:altLabel xml:lang="en">model based on partial differential equations</skos:altLabel>
+        <skos:altLabel xml:lang="en">model using partial differential equations</skos:altLabel>
+        <skos:altLabel xml:lang="en">partial differential equations model</skos:altLabel>
+        <skos:definition xml:lang="en">model using differential equations that contains unknown multivariable functions and their partial derivatives.</skos:definition>
+        <skos:prefLabel xml:lang="en">partial differential equation model</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000049 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000049">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000003"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://identifiers.org/mamo#hasFeature"/>
+                <owl:someValuesFrom rdf:resource="http://identifiers.org/mamo/MAMO_0000056"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://identifiers.org/mamo#hasFeature"/>
+                <owl:someValuesFrom rdf:resource="http://identifiers.org/mamo/MAMO_0000059"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://identifiers.org/mamo#hasFeature"/>
+                <owl:someValuesFrom rdf:resource="http://identifiers.org/mamo/MAMO_0000064"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://identifiers.org/mamo#isUsedToModel"/>
+                <owl:someValuesFrom rdf:resource="http://identifiers.org/mamo/MAMO_0000038"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Finite-state_machine</rdfs:seeAlso>
+        <skos:definition xml:lang="en">Interacting state machines are diagram-based formalisms that describe the temporal behavior of a system based on the changes in the states of its parts. They differ from other approaches as they define a system in terms of its states rather than its components.</skos:definition>
+        <skos:prefLabel xml:lang="en">interacting state machine</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000050 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000050">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000023"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://identifiers.org/mamo#hasFeature"/>
+                <owl:someValuesFrom rdf:resource="http://identifiers.org/mamo/MAMO_0000059"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://identifiers.org/mamo#isUsedToModel"/>
+                <owl:someValuesFrom rdf:resource="http://identifiers.org/mamo/MAMO_0000038"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://identifiers.org/mamo#isUsedToModel"/>
+                <owl:someValuesFrom rdf:resource="http://identifiers.org/mamo/MAMO_0000039"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://identifiers.org/mamo#isUsedToModel"/>
+                <owl:someValuesFrom rdf:resource="http://identifiers.org/mamo/MAMO_0000040"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Cellular_automaton</rdfs:seeAlso>
+        <skos:definition xml:lang="en">Cellular automata are discrete dynamic models that consist on a grid of cells with a finite number of states. A cellular automaton has an initial configuration that changes at each time step through a predefined rule that calculates the state of each cell as a function of the state of its neighbors at the previous step.</skos:definition>
+        <skos:prefLabel xml:lang="en">cellular automaton</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000051 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000051">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000050"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://identifiers.org/mamo#hasFeature"/>
+                <owl:someValuesFrom rdf:resource="http://identifiers.org/mamo/MAMO_0000056"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://identifiers.org/pubmed/15972011</rdfs:seeAlso>
+        <skos:altLabel xml:lang="en">DSA</skos:altLabel>
+        <skos:definition xml:lang="en">Dynamic cellular automata are a variation of cellular automata that allows for movement of the cell contents inside the grid, mimicking brownian motion.</skos:definition>
+        <skos:prefLabel xml:lang="en">dynamic cellular automaton</skos:prefLabel>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://identifiers.org/mamo/MAMO_0000051"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://identifiers.org/pubmed/15972011</owl:annotatedTarget>
+        <rdfs:comment xml:lang="en">Wishart DS, Yang R, Arndt D, Tang P, Cruz J (2005) Dynamic cellular automata: an alternative approach to cellular simulation. In Silico Biol., 5(2):139-61.</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000052 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000052">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000050"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://identifiers.org/mamo#hasFeature"/>
+                <owl:someValuesFrom rdf:resource="http://identifiers.org/mamo/MAMO_0000064"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Stochastic_cellular_automaton</rdfs:seeAlso>
+        <skos:definition xml:lang="en">Cellular automaton whose updating rule is stochastic, which means the new entity&apos;s state is not chosen deterministically based on the neighbours&apos; states, but according to some probability distributions depending on the neighbours&apos; states.</skos:definition>
+        <skos:prefLabel xml:lang="en">stochastic cellular automaton</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000053 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000053">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000030"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://identifiers.org/mamo#isUsedToModel"/>
+                <owl:someValuesFrom rdf:resource="http://identifiers.org/mamo/MAMO_0000039"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Boolean_network</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://identifiers.org/pubmed/5803332</rdfs:seeAlso>
+        <skos:definition xml:lang="en">Boolean models model networks of genes by boolean variables that represent active and inactive states. At each time step, the state of each gene is determined by a logic rule which is a function of the state of its regulators. The state of all genes forms a global state that changes synchronously.</skos:definition>
+        <skos:prefLabel xml:lang="en">boolean model</skos:prefLabel>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://identifiers.org/mamo/MAMO_0000053"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://identifiers.org/pubmed/5803332</owl:annotatedTarget>
+        <rdfs:comment xml:lang="en">Kauffman S (1969) Metabolic stability and epigenesis in randomly constructed genetic nets. J Theor Biol 22(3):437–467</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000054 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000054">
+        <skos:altLabel xml:lang="en">modeling entity feature</skos:altLabel>
+        <skos:definition xml:lang="en">Dependent entity which another modelling entity has, i.e., that entity exhibits its property. Other common terms for property in natural language are characteristic, property, quality, etc.</skos:definition>
+        <skos:prefLabel xml:lang="en">modelling entity feature</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000055 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000055">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000054"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Temporality</rdfs:seeAlso>
+        <skos:definition xml:lang="en">Characterises the evolution of a modelling entity over time.</skos:definition>
+        <skos:prefLabel xml:lang="en">temporal quality</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000056 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000056">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000055"/>
+        <owl:disjointWith rdf:resource="http://identifiers.org/mamo/MAMO_0000057"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Dynamical</rdfs:seeAlso>
+        <skos:definition xml:lang="en">Characterises a modelling entity that evolves over time.</skos:definition>
+        <skos:prefLabel xml:lang="en">dynamical characteristic</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000057 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000057">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000055"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wiktionary.org/wiki/static</rdfs:seeAlso>
+        <skos:definition xml:lang="en">Characterises a modelling entity that does not evolve over time.</skos:definition>
+        <skos:prefLabel xml:lang="en">static characteristic</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000058 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000058">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000054"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wiktionary.org/wiki/qualitative</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wiktionary.org/wiki/quantitative</rdfs:seeAlso>
+        <skos:definition xml:lang="en">Characterises the possibility to be measured numerically.</skos:definition>
+        <skos:prefLabel xml:lang="en">quantitative characteristic</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000059 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000059">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000058"/>
+        <owl:disjointWith rdf:resource="http://identifiers.org/mamo/MAMO_0000060"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wiktionary.org/wiki/discrete</rdfs:seeAlso>
+        <skos:definition xml:lang="en">Which values can be enumerated.</skos:definition>
+        <skos:prefLabel xml:lang="en">discrete characteristic</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000060 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000060">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000058"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wiktionary.org/wiki/continuous</rdfs:seeAlso>
+        <skos:definition xml:lang="en">Which values cannot be enumerated. Whatever two values, there is always another value in between.</skos:definition>
+        <skos:prefLabel xml:lang="en">continuous characteristic</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000061 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000061">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000054"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"> http://en.wikipedia.org/wiki/Nonlinear</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Linear_system</rdfs:seeAlso>
+        <skos:definition xml:lang="en">Which satisfies the principles of superposition and scaling.</skos:definition>
+        <skos:prefLabel xml:lang="en">linear quality</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000062 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000062">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000054"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"> http://en.wikipedia.org/wiki/Uncertainty</rdfs:seeAlso>
+        <skos:definition xml:lang="en">Characterises the certainty, or lack of, of the modelling entity feature.</skos:definition>
+        <skos:prefLabel xml:lang="en">uncertainty level</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000063 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000063">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000062"/>
+        <owl:disjointWith rdf:resource="http://identifiers.org/mamo/MAMO_0000064"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Deterministic</rdfs:seeAlso>
+        <skos:definition xml:lang="en">Which value or behaviour is certain.</skos:definition>
+        <skos:prefLabel xml:lang="en">deterministic nature</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000064 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000064">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000062"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Probabilistic</rdfs:seeAlso>
+        <skos:altLabel xml:lang="en">stochastic nature</skos:altLabel>
+        <skos:definition xml:lang="en">Which can exhibit alternative values or behaviours with differnent probability.</skos:definition>
+        <skos:prefLabel xml:lang="en">probabilistic nature</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000069 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000069">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000025"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Coloured_Petri_net</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://identifiers.org/isbn/978-3-642-00284-7</rdfs:seeAlso>
+        <skos:altLabel xml:lang="en">CP-net</skos:altLabel>
+        <skos:altLabel xml:lang="en">CPN</skos:altLabel>
+        <skos:altLabel xml:lang="en">colored Petri net</skos:altLabel>
+        <skos:definition xml:lang="en">graphical language for modelling and validating concurrent and distributed systems, and other systems in which concurrency plays a major role</skos:definition>
+        <skos:prefLabel xml:lang="en">coloured Petri net</skos:prefLabel>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://identifiers.org/mamo/MAMO_0000069"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://identifiers.org/isbn/978-3-642-00284-7</owl:annotatedTarget>
+        <rdfs:comment xml:lang="en">Jensen K, Kristensen LM. Coloured Petri Nets: Modeling and Validation of Concurrent Systems. Berlin: Springer, 2009.</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000070 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000070">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000025"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://identifiers.org/mamo#hasFeature"/>
+                <owl:someValuesFrom rdf:resource="http://identifiers.org/mamo/MAMO_0000060"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://identifiers.org/isbn/978-3-642-10669-9</rdfs:seeAlso>
+        <skos:altLabel xml:lang="en">continuous PN</skos:altLabel>
+        <skos:definition xml:lang="en">Petri net model in which the number of marks in the places are real numbers instead of integers</skos:definition>
+        <skos:prefLabel xml:lang="en">continuous Petri net</skos:prefLabel>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://identifiers.org/mamo/MAMO_0000070"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://identifiers.org/isbn/978-3-642-10669-9</owl:annotatedTarget>
+        <rdfs:comment xml:lang="en">David R, Alla H. Discrete, continuous, and hybrid Petri Nets. Berlin, London: Springer, 2010.</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000071 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000071">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000025"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://identifiers.org/pubmed/17626066</rdfs:seeAlso>
+        <skos:altLabel xml:lang="en">functional PN</skos:altLabel>
+        <skos:altLabel xml:lang="en">functional PNs</skos:altLabel>
+        <skos:altLabel xml:lang="en">self-modified PN</skos:altLabel>
+        <skos:altLabel xml:lang="en">self-modified PNs</skos:altLabel>
+        <skos:altLabel xml:lang="en">self-modified Petri net</skos:altLabel>
+        <skos:definition xml:lang="en"> A Petri net that allows the flow relations between places and transitions to depend on the marking.</skos:definition>
+        <skos:prefLabel xml:lang="en">functional Petri net </skos:prefLabel>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://identifiers.org/mamo/MAMO_0000071"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://identifiers.org/pubmed/17626066</owl:annotatedTarget>
+        <rdfs:comment xml:lang="en">Chaouiya C. Petri net modelling of biological networks. Brief Bioinform. 2007;8(4):210-9.</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000072 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000072">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000071"/>
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000073"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://identifiers.org/pubmed/12954096</rdfs:seeAlso>
+        <skos:altLabel xml:lang="en">HFPN</skos:altLabel>
+        <skos:altLabel xml:lang="en">HFPNs</skos:altLabel>
+        <skos:altLabel xml:lang="en">Hybrid functional PNs</skos:altLabel>
+        <skos:altLabel xml:lang="en">hybrid functional PN</skos:altLabel>
+        <skos:definition xml:lang="en">hybrid Petri nets with additional features: continuous transition firing rates can depend on the values of the input places and the weights of arcs can be defined as a function of the markings of the connected places.</skos:definition>
+        <skos:prefLabel xml:lang="en">hybrid functional Petri net</skos:prefLabel>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://identifiers.org/mamo/MAMO_0000072"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://identifiers.org/pubmed/12954096</owl:annotatedTarget>
+        <rdfs:comment xml:lang="en">Matsuno H, Tanaka Y, Aoshima H, Doi A, Matsui M, Miyano S. Biopathways representation and simulation on hybrid functional Petri net. In Silico Biol. 2003;3(3):389-404.</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000073 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000073">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000025"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://identifiers.org/pubmed/17626066</rdfs:seeAlso>
+        <skos:altLabel xml:lang="en">HPN</skos:altLabel>
+        <skos:altLabel xml:lang="en">HPNs</skos:altLabel>
+        <skos:altLabel xml:lang="en">hybrid PN</skos:altLabel>
+        <skos:definition xml:lang="en">Petri nets that allow the coexistence of both continuous and discrete processes. They include discrete places (marked with tokens) and continuous places associated with real variables (e.g. concentration levels). </skos:definition>
+        <skos:prefLabel xml:lang="en">hybrid Petri net</skos:prefLabel>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://identifiers.org/mamo/MAMO_0000073"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://identifiers.org/pubmed/17626066</owl:annotatedTarget>
+        <rdfs:comment xml:lang="en">Chaouiya C. Petri net modelling of biological networks. Brief Bioinform. 2007;8(4):210-9.</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000074 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000074">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000025"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://identifiers.org/mamo#hasFeature"/>
+                <owl:someValuesFrom rdf:resource="http://identifiers.org/mamo/MAMO_0000059"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://identifiers.org/mamo#hasFeature"/>
+                <owl:someValuesFrom rdf:resource="http://identifiers.org/mamo/MAMO_0000064"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Stochastic_Petri_net</rdfs:seeAlso>
+        <skos:altLabel xml:lang="en">SPN</skos:altLabel>
+        <skos:altLabel xml:lang="en">stochastic PN</skos:altLabel>
+        <skos:definition xml:lang="en">form of Petri net where the transitions fire after a probabilistic delay determined by a random variable.</skos:definition>
+        <skos:prefLabel xml:lang="en">stochastic Petri net</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000075 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000075">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000004"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Logistic_regression</rdfs:seeAlso>
+        <skos:altLabel xml:lang="en">logit regression</skos:altLabel>
+        <skos:definition xml:lang="en">type of probabilistic classification model used for predicting the outcome of a categorical dependent variable (i.e., a class label) based on one or more predictor variables (features).</skos:definition>
+        <skos:prefLabel xml:lang="en">logistic regression</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000076 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000076">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000004"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://identifiers.org/mamo#hasFeature"/>
+                <owl:someValuesFrom rdf:resource="http://identifiers.org/mamo/MAMO_0000063"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://identifiers.org/mamo#hasFeature"/>
+                <owl:someValuesFrom rdf:resource="http://identifiers.org/mamo/MAMO_0000064"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Mixed_model</rdfs:seeAlso>
+        <skos:definition xml:lang="en">statistical model containing both fixed effects and random effects, that is mixed effects.</skos:definition>
+        <skos:prefLabel xml:lang="en">mixed model</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000077 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000077">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000004"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Multinomial_logistic_regression</rdfs:seeAlso>
+        <skos:altLabel xml:lang="en">multinomial logit</skos:altLabel>
+        <skos:altLabel xml:lang="en">softmax regression</skos:altLabel>
+        <skos:definition xml:lang="en">regression model which generalizes logistic regression by allowing more than two discrete outcomes.</skos:definition>
+        <skos:prefLabel xml:lang="en">multinomial logistic regression</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000078 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000078">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000004"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Poisson_regression</rdfs:seeAlso>
+        <skos:definition xml:lang="en">form of regression analysis used to model count data and contingency tables. Poisson regression assumes the response variable Y has a Poisson distribution, and assumes the logarithm of its expected value can be modeled by a linear combination of unknown parameters. </skos:definition>
+        <skos:prefLabel xml:lang="en">Poisson regression</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000080 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000080">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000086"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://identifiers.org/mamo#hasFeature"/>
+                <owl:someValuesFrom rdf:resource="http://identifiers.org/mamo/MAMO_0000059"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Binary_data</rdfs:seeAlso>
+        <skos:definition xml:lang="en">Data whose individual element can take on only two possible values, traditionally termed 0 and 1 in accordance with the binary numeral system and Boolean algebra. </skos:definition>
+        <skos:prefLabel xml:lang="en">binary data variable</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000081 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000081">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000086"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://identifiers.org/mamo#hasFeature"/>
+                <owl:someValuesFrom rdf:resource="http://identifiers.org/mamo/MAMO_0000059"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Categorical_data</rdfs:seeAlso>
+        <skos:altLabel>nominal categorical data variable</skos:altLabel>
+        <skos:definition xml:lang="en">Statistical data type consisting of categorical variables, used for observed data whose value is one of a fixed number of nominal categories, or for data that has been converted into that form, for example as grouped data.</skos:definition>
+        <skos:prefLabel xml:lang="en">categorical data variable</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000082 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000082">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000086"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://identifiers.org/mamo#hasFeature"/>
+                <owl:someValuesFrom rdf:resource="http://identifiers.org/mamo/MAMO_0000059"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Count_variable</rdfs:seeAlso>
+        <skos:definition xml:lang="en">Statistical data type, a type of data in which the observations can take only the non-negative integer values {0, 1, 2, 3, ...}, and where these integers arise from counting rather than ranking.</skos:definition>
+        <skos:prefLabel xml:lang="en">count data variable</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000083 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000083">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000086"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Longitudinal_study</rdfs:seeAlso>
+        <skos:definition xml:lang="en">repeated observations of the same variables over time.</skos:definition>
+        <skos:prefLabel xml:lang="en">longitudinal data variable</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000084 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000084">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000027"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Phase_portrait</rdfs:seeAlso>
+        <skos:definition xml:lang="en">representation of the trajectories of a dynamical system in the phase plane. Each set of initial conditions is represented by a different curve, or point.</skos:definition>
+        <skos:prefLabel xml:lang="en">phase portrait</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000085 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000085">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000027"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Steady-state</rdfs:seeAlso>
+        <skos:definition xml:lang="en">value that does not change over time</skos:definition>
+        <skos:prefLabel xml:lang="en">steady state value</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000086 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000086">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000010"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Statistical_data_type</rdfs:seeAlso>
+        <skos:definition xml:lang="en">In statistics, groups of individual data points may be classified as belonging to any of various statistical data types, e.g. categorical (&quot;red&quot;, &quot;blue&quot;, &quot;green&quot;), real number (1.68, -5, 1.7e+6), etc.</skos:definition>
+        <skos:prefLabel xml:lang="en">statistical variable</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000087 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000087">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000019"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.fda.gov/downloads/Drugs/Guidances/UCM072137.pdf</rdfs:seeAlso>
+        <skos:definition xml:lang="en">Model to study the sources and correlates of variability in drug concentrations among individuals who are the target patient population receiving clinically relevant doses of a drug of interest.</skos:definition>
+        <skos:prefLabel xml:lang="en">population pharmacokinetics model</skos:prefLabel>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://identifiers.org/mamo/MAMO_0000087"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.fda.gov/downloads/Drugs/Guidances/UCM072137.pdf</owl:annotatedTarget>
+        <rdfs:comment xml:lang="en">Guidance for Industry, Population Pharmacokinetics, U.S. Department of Health and Human Services, Food and Drug Administration, Center for Drug Evaluation and Research (CDER), Center for Biologics Evaluation and Research (CBER)February 1999.</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000088 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000088">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000180"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://lenoverelab.org/perso/lenov/PUBLIS/Tolle2006.pdf</rdfs:seeAlso>
+        <skos:altLabel xml:lang="en">mesoscopic model</skos:altLabel>
+        <skos:definition xml:lang="en">model where the reactions and diffusion of each particle in a population is described and followed over time. Sometimes called mesoscopic model, because more abstract than an atomic or molecular dynamic model, but more detailed than a concentration based reaction diffusion model. </skos:definition>
+        <skos:prefLabel xml:lang="en">single particle spatial model</skos:prefLabel>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://identifiers.org/mamo/MAMO_0000088"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://lenoverelab.org/perso/lenov/PUBLIS/Tolle2006.pdf</owl:annotatedTarget>
+        <rdfs:comment xml:lang="en">Tolle D., Le Novère N. Particle-based Stochastic Simulation in Systems Biology. Current Bioinformatics (2006), 1: 315-320.</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000089 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000089">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000045"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Delay_differential_equation</rdfs:seeAlso>
+        <skos:altLabel xml:lang="en">DDE model</skos:altLabel>
+        <skos:altLabel xml:lang="en">delayed differential equations model</skos:altLabel>
+        <skos:altLabel xml:lang="en">model based on delayed differential equations</skos:altLabel>
+        <skos:altLabel xml:lang="en">model using delayed differential equations</skos:altLabel>
+        <skos:definition xml:lang="en">model using a type of differential equation in which the derivative of the unknown function at a certain time is given in terms of the values of the function at previous times.</skos:definition>
+        <skos:prefLabel xml:lang="en">delayed differential equation model </skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000090 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000090">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000045"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Differential_algebraic_equation</rdfs:seeAlso>
+        <skos:altLabel xml:lang="en">DAE model</skos:altLabel>
+        <skos:altLabel xml:lang="en">differential algebraic equations model</skos:altLabel>
+        <skos:altLabel xml:lang="en">model based on differential algebraic equations</skos:altLabel>
+        <skos:altLabel xml:lang="en">model using differential algebraic equations</skos:altLabel>
+        <skos:definition xml:lang="en">general form of (systems of) differential equations for vector–valued functions x in one independent variable,</skos:definition>
+        <skos:prefLabel xml:lang="en">differential algebraic equation model</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000180 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000180">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000037"/>
+        <skos:prefLabel xml:lang="en">domain model</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000181 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000181">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000180"/>
+        <rdfs:seeAlso>https://en.wikipedia.org/wiki/Pharmacometrics</rdfs:seeAlso>
+        <skos:definition>model used to describe and quantify interactions between xenobiotics and patients.</skos:definition>
+        <skos:prefLabel xml:lang="en">pharmacometrics model</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000182 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000182">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000030"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://identifiers.org/isbn/978-3-540-09556-9</rdfs:seeAlso>
+        <skos:definition xml:lang="en">logical model in which variables can take more than two levels.</skos:definition>
+        <skos:prefLabel xml:lang="en">multi-value logic model</skos:prefLabel>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://identifiers.org/mamo/MAMO_0000182"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://identifiers.org/isbn/978-3-540-09556-9</owl:annotatedTarget>
+        <rdfs:comment xml:lang="en">P Van Ham. How to deal with variables with more than two levels. In Kinetic Logic A Boolean Approach to the Analysis of Complex Regulatory Systems. Lecture Notes in Biomathematics Vol 29, 1979, pp 326-343</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000183 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000183">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000050"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dx.doi.org/10.1103/PhysRevLett.69.2013</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Cellular_Potts_model</rdfs:seeAlso>
+        <skos:altLabel xml:lang="en">Glazier and Graner model</skos:altLabel>
+        <skos:altLabel xml:lang="en">extended large-q Potts model</skos:altLabel>
+        <skos:definition xml:lang="en">generalized version of a Potts model, where the cell associated with a spin can be composed of several elements, called pixels. Simulations progress by updating the pixels.</skos:definition>
+        <skos:prefLabel xml:lang="en">cellular Potts model</skos:prefLabel>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://identifiers.org/mamo/MAMO_0000183"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://dx.doi.org/10.1103/PhysRevLett.69.2013</owl:annotatedTarget>
+        <rdfs:comment xml:lang="en">Graner F and Glazier JA. Simulation of biological cell sorting using a two-dimensional extended Potts model, Phys. Rev. Lett. 69, 2013 - Published 28 September 1992.</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000184 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000184">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000183"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Potts_model</rdfs:seeAlso>
+        <skos:definition xml:lang="en">cellular Potts model in which each cell is made up of only one pixel (q-spin). The standard Potts model is a generalisation of the Ising model where the spin can take a discret number of values regularly distributed.</skos:definition>
+        <skos:prefLabel xml:lang="en">standard Potts model</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000185 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000185">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000184"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Ising_model</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://identifiers.org/pubmed/10468569</rdfs:seeAlso>
+        <skos:definition xml:lang="en">model that consists of discrete variables, called spins, that can be in one of two states (+1 or −1). The spins are arranged in a graph, usually, a lattice,</skos:definition>
+        <skos:prefLabel xml:lang="en">Ising model</skos:prefLabel>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://identifiers.org/mamo/MAMO_0000185"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://identifiers.org/pubmed/10468569</owl:annotatedTarget>
+        <rdfs:comment xml:lang="en">Duke TA, Bray D. Heightened sensitivity of a lattice of membrane receptors. Proc Natl Acad Sci U S A. 1999;96(18):10104-8.</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000186 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000186">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000030"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://identifiers.org/pubmed/19343194</rdfs:seeAlso>
+        <skos:definition xml:lang="en">logical model which rely on fuzzy logic for deciding the new values of variables, that is the use of truth values instead of truth table to interpret the inputs and the resulting output.</skos:definition>
+        <skos:prefLabel xml:lang="en">fuzzy logic model</skos:prefLabel>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://identifiers.org/mamo/MAMO_0000186"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://identifiers.org/pubmed/19343194</owl:annotatedTarget>
+        <rdfs:comment xml:lang="en">Aldridge BB, Saez-Rodriguez J, Muhlich JL, Sorger PK, Lauffenburger DA. Fuzzy logic analysis of kinase pathway crosstalk in TNF/EGF/insulin-induced signaling. PLoS Comput Biol. 2009;5(4):e1000340.</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000187 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000187">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000182"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://identifiers.org/doi/10.1080/02681118908806072</rdfs:seeAlso>
+        <skos:definition xml:lang="en">multi-valued logical model with multiple thresholds to assign variable values, logical parameters controlling the assignments, and asynchronous update.</skos:definition>
+        <skos:prefLabel xml:lang="en">generalized logical model</skos:prefLabel>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://identifiers.org/mamo/MAMO_0000187"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://identifiers.org/doi/10.1080/02681118908806072</owl:annotatedTarget>
+        <rdfs:comment xml:lang="en">Snoussi EH. Qualitative dynamics of piecewise-linear differential equations: a discrete mapping approach. Dyn Stab Syst 1989, 4(3-4): 565-583</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000188 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000188">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000036"/>
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000046"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Biochemical_systems_theory</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://identifier.org/pubmed/5387047</rdfs:seeAlso>
+        <skos:definition xml:lang="en">model in which the creation and destruction of a molecular species are represented using two power-law expansions in the species of the system. Reactions are not represented independently, but are subsumed in the apparent global reaction order (not necessarily integer) for the species affecting its rate.</skos:definition>
+        <skos:prefLabel xml:lang="en">S system model</skos:prefLabel>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://identifiers.org/mamo/MAMO_0000188"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://identifier.org/pubmed/5387047</owl:annotatedTarget>
+        <rdfs:comment xml:lang="en">Savageau MA. Biochemical systems analysis. II. The steady-state solutions for an n-pool system using a power-law approximation. J Theor Biol. 1969 Dec;25(3):370-9.</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000189 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000189">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000019"/>
+        <owl:disjointWith rdf:resource="http://identifiers.org/mamo/MAMO_0000191"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://identifier.org/isbn/978-0387-27197-2</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Linear_model#Time_series_models</rdfs:seeAlso>
+        <skos:definition xml:lang="en">pharmacokinetic model expressed as differential equations in which partial derivatives with respect to any of the model parameters are independent of the other parameters</skos:definition>
+        <skos:prefLabel xml:lang="en">linear pharmacokinetic model</skos:prefLabel>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://identifiers.org/mamo/MAMO_0000189"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://identifier.org/isbn/978-0387-27197-2</owl:annotatedTarget>
+        <rdfs:comment xml:lang="en">Bonate PL (2006) Pharmacokinetic-Pharmacodynamic; Modeling and simulation. p 57</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000190 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000190">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000189"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://identifier.org/isbn/978-0387-27197-2</rdfs:seeAlso>
+        <skos:definition xml:lang="en">linear pharmacokinetic model which contain both fixed and random effects (mixed)</skos:definition>
+        <skos:prefLabel xml:lang="en">linear mixed effect pharmacokinetic model</skos:prefLabel>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://identifiers.org/mamo/MAMO_0000190"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://identifier.org/isbn/978-0387-27197-2</owl:annotatedTarget>
+        <rdfs:comment xml:lang="en">Bonate PL (2006) Pharmacokinetic-Pharmacodynamic; Modeling and simulation. p 181</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000191 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000191">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000019"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://identifier.org/isbn/978-0387-27197-2</rdfs:seeAlso>
+        <skos:definition xml:lang="en">pharmacokinetic model expressed as differential equations in which any partial derivatives with respect to any of the model parameters are dependent on any other model parameter or for which the derivatives do not exist or are discontinuous</skos:definition>
+        <skos:prefLabel xml:lang="en">nonlinear pharmacokinetic model</skos:prefLabel>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://identifiers.org/mamo/MAMO_0000191"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://identifier.org/isbn/978-0387-27197-2</owl:annotatedTarget>
+        <rdfs:comment xml:lang="en">Bonate PL (2006) Pharmacokinetic-Pharmacodynamic; Modeling and simulation. p 93</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000192 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000192">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000191"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://identifier.org/isbn/978-0387-27197-2</rdfs:seeAlso>
+        <skos:definition xml:lang="en">nonlinear pharmacokinetic model which contain both fixed and random effects (mixed)</skos:definition>
+        <skos:prefLabel xml:lang="en">nonlinear mixed effect pharmacokinetic model</skos:prefLabel>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://identifiers.org/mamo/MAMO_0000192"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://identifier.org/isbn/978-0387-27197-2</owl:annotatedTarget>
+        <rdfs:comment xml:lang="en">Bonate PL (2006) Pharmacokinetic-Pharmacodynamic; Modeling and simulation. p 205</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000193 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000193">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000003"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://identifiers.org/mamo#hasFeature"/>
+                <owl:someValuesFrom rdf:resource="http://identifiers.org/mamo/MAMO_0000064"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Markov_model</rdfs:seeAlso>
+        <skos:definition xml:lang="en">a stochastic model, that models a process where the state depends on previous states in a non-deterministic way, and assumes the Markov property: the conditional probability distribution of future states of the process (conditional on both past and present values) depends only upon the present state; that is, given the present, the future does not depend on the past.</skos:definition>
+        <skos:prefLabel xml:lang="en">Markov model</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000194 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000194">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000193"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Hidden_Markov_model</rdfs:seeAlso>
+        <skos:altLabel xml:lang="en">HMM</skos:altLabel>
+        <skos:definition xml:lang="en">a Markov model in which the system being modeled is autonomous and its state is only partially observable. In other words, observations are related to the state of the system, but they are typically insufficient to precisely determine the state.</skos:definition>
+        <skos:prefLabel xml:lang="en">hidden Markov model</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000195 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000195">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000193"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Markov_chain</rdfs:seeAlso>
+        <skos:altLabel xml:lang="en">DTMC</skos:altLabel>
+        <skos:altLabel xml:lang="en">discrete-time Markov chain</skos:altLabel>
+        <skos:definition xml:lang="en">a Markov model that models the state of a system with a random variable that changes through time. In this context, the Markov property suggests that the distribution for this variable depends only on the distribution of the previous state. The system is autonomous and its state is fully observable.</skos:definition>
+        <skos:prefLabel xml:lang="en">Markov chain</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000196 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000196">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000193"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Markov_decision_process</rdfs:seeAlso>
+        <skos:altLabel xml:lang="en">MDP</skos:altLabel>
+        <skos:definition xml:lang="en">a mathematical framework for modeling decision making in situations where outcomes are partly random and partly under the control of a decision maker.</skos:definition>
+        <skos:prefLabel xml:lang="en">Markov decision process</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000197 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000197">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000193"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Markov_random_field</rdfs:seeAlso>
+        <skos:altLabel xml:lang="en">MRF</skos:altLabel>
+        <skos:altLabel xml:lang="en">Markov network</skos:altLabel>
+        <skos:altLabel xml:lang="en">undirected graphical model</skos:altLabel>
+        <skos:definition xml:lang="en">a set of random variables having a Markov property described by an undirected graph. A Markov random field may be considered to be a generalization of a Markov chain in multiple dimensions. In a Markov chain, state depends only on the previous state in time, whereas in a Markov random field, each state depends on its neighbors in any of multiple directions. A Markov random field may be visualized as a field or graph of random variables, where the distribution of each random variable depends on the neighboring variables with which it is connected.</skos:definition>
+        <skos:prefLabel xml:lang="en">Markov random field</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000198 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000198">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000045"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Piecewise_linear_function</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://identifiers.org/pubmed/4741704</rdfs:seeAlso>
+        <skos:altLabel xml:lang="en">model based on piecewise linear differential equations</skos:altLabel>
+        <skos:altLabel xml:lang="en">model using piecewise linear differential equations</skos:altLabel>
+        <skos:altLabel xml:lang="en">piecewise linear differential equations model</skos:altLabel>
+        <skos:definition xml:lang="en">model using functions that respond to parameter values via threshold (Heavyside) functions.</skos:definition>
+        <skos:prefLabel xml:lang="en">piecewise linear differential equation model</skos:prefLabel>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://identifiers.org/mamo/MAMO_0000198"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://identifiers.org/pubmed/4741704</owl:annotatedTarget>
+        <rdfs:comment xml:lang="en">Glass L, Kauffman SA. The logical analysis of continuous, non-linear biochemical control networks. J Theor Biol. 1973;39(1):103-29.</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000199 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000199">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000198"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://identifiers.org/mamo#hasFeature"/>
+                <owl:someValuesFrom rdf:resource="http://identifiers.org/mamo/MAMO_0000059"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://identifiers.org/pubmed/16521027</rdfs:seeAlso>
+        <skos:definition xml:lang="en">model using piecewise linear differential equations in which variables are updated only at certain times.</skos:definition>
+        <skos:prefLabel xml:lang="en">discrete time piecewise linear differential equation model</skos:prefLabel>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://identifiers.org/mamo/MAMO_0000199"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://identifiers.org/pubmed/16521027</owl:annotatedTarget>
+        <rdfs:comment xml:lang="en">Coutinho R, Fernandez B, Lima R, Meyroneinc A. Discrete time piecewise affine models of genetic regulatory networks. J Math Biol. 2006 Apr;52(4):524-70. Epub 2006 Mar 6.</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000200 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000200">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000198"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://identifiers.org/pubmed/14871568</rdfs:seeAlso>
+        <skos:definition xml:lang="en">piecewise linear differential equation model in which the variables can only take a discrete number of levels.</skos:definition>
+        <skos:prefLabel xml:lang="en">qualitative piecewise linear differential equation model</skos:prefLabel>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://identifiers.org/mamo/MAMO_0000200"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://identifiers.org/pubmed/14871568</owl:annotatedTarget>
+        <rdfs:comment xml:lang="en">De Jong H1, Gouze JL, Hernandez C, Page M, Sari T, Geiselmann J. Qualitative simulation of genetic regulatory networks using piecewise-linear models. Bull Math Biol. 2004 Mar;66(2):301-40.</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000202 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000202">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000036"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Protein%E2%80%93protein_interaction</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://identifiers.org/pubmed/22385417</rdfs:seeAlso>
+        <skos:altLabel xml:lang="en">PIN</skos:altLabel>
+        <skos:altLabel xml:lang="en">PPI</skos:altLabel>
+        <skos:altLabel xml:lang="en">PPI network</skos:altLabel>
+        <skos:altLabel xml:lang="en">PPIN</skos:altLabel>
+        <skos:altLabel xml:lang="en">PPIs</skos:altLabel>
+        <skos:definition xml:lang="en">A network representing intentional physical contacts established between two or more proteins as a result of biochemical events and/or electrostatic forces.</skos:definition>
+        <skos:prefLabel xml:lang="en">protein-protein interaction network</skos:prefLabel>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://identifiers.org/mamo/MAMO_0000202"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://identifiers.org/pubmed/22385417</owl:annotatedTarget>
+        <rdfs:comment xml:lang="en">Koh et al. Analyzing protein-protein interaction networks. J Proteome Res. 2012; 11(4):2014-31.</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000203 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000203">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000019"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Physiologically_based_pharmacokinetic_modelling</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://identifiers.org/pubmed/23945604</rdfs:seeAlso>
+        <skos:altLabel xml:lang="en">PBPK</skos:altLabel>
+        <skos:definition xml:lang="en">A model using a series of differential equations that are parametrized with known physiological variables and represent a quantitative mechanistic framework by which the absorption, distribution, metabolism, and excretion (ADME) of new drugs can be described.</skos:definition>
+        <skos:prefLabel xml:lang="en">physiologically based pharmacokinetic model</skos:prefLabel>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://identifiers.org/mamo/MAMO_0000203"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://identifiers.org/pubmed/23945604</owl:annotatedTarget>
+        <rdfs:comment xml:lang="en">HM Jones and K Rowland-Yeo Basic Concepts in Physiologically Based Pharmacokinetic Modeling in Drug Discovery and Development (2013) Pharmacometrics Syst Pharmacol. 2(8): e63.</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000204 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000204">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000185"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Square-lattice_Ising_model</rdfs:seeAlso>
+        <skos:definition xml:lang="en">2D Ising model [http://identifiers.org/mamo/MAMO_0000185] of interacting magnetic spins on a square lattice.</skos:definition>
+        <skos:prefLabel xml:lang="en">square-lattice Ising model</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://identifiers.org/mamo/MAMO_0000205 -->
+
+    <owl:Class rdf:about="http://identifiers.org/mamo/MAMO_0000205">
+        <rdfs:subClassOf rdf:resource="http://identifiers.org/mamo/MAMO_0000180"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://identifiers.org/pubmed/22817898</rdfs:seeAlso>
+        <skos:definition xml:lang="en">Computational model that includes all of the molecular components of a biological cell and their interactions.</skos:definition>
+        <skos:prefLabel xml:lang="en">whole-cell model</skos:prefLabel>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://identifiers.org/mamo/MAMO_0000205"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://identifiers.org/pubmed/22817898</owl:annotatedTarget>
+        <rdfs:comment xml:lang="en">Karr et al. A whole-cell computational model predicts phenotype from genotype. Cell. 2012; 150(2):389-401.</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://identifiers.org/mamo#MAMO_0000207"/>
+            <rdf:Description rdf:about="http://identifiers.org/mamo#MAMO_0000208"/>
+            <rdf:Description rdf:about="http://identifiers.org/mamo#MAMO_0000209"/>
+            <rdf:Description rdf:about="http://identifiers.org/mamo#MAMO_0000210"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://identifiers.org/mamo/MAMO_0000010"/>
+            <rdf:Description rdf:about="http://identifiers.org/mamo/MAMO_0000027"/>
+            <rdf:Description rdf:about="http://identifiers.org/mamo/MAMO_0000037"/>
+            <rdf:Description rdf:about="http://identifiers.org/mamo/MAMO_0000054"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://identifiers.org/mamo/MAMO_0000038"/>
+            <rdf:Description rdf:about="http://identifiers.org/mamo/MAMO_0000039"/>
+            <rdf:Description rdf:about="http://identifiers.org/mamo/MAMO_0000040"/>
+            <rdf:Description rdf:about="http://identifiers.org/mamo/MAMO_0000202"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://identifiers.org/mamo/MAMO_0000046"/>
+            <rdf:Description rdf:about="http://identifiers.org/mamo/MAMO_0000047"/>
+            <rdf:Description rdf:about="http://identifiers.org/mamo/MAMO_0000048"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://identifiers.org/mamo/MAMO_0000055"/>
+            <rdf:Description rdf:about="http://identifiers.org/mamo/MAMO_0000058"/>
+            <rdf:Description rdf:about="http://identifiers.org/mamo/MAMO_0000061"/>
+            <rdf:Description rdf:about="http://identifiers.org/mamo/MAMO_0000062"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi -->
+

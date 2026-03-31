@@ -1,0 +1,8 @@
+format-version: 1.2
+data-version: mamo/releases/2026-03-31/mamo-base.owl
+idspace: dc http://purl.org/dc/elements/1.1/ 
+ontology: mamo/mamo-base
+property_value: dc:type IAO:8000001
+property_value: owl:versionInfo "2023-02-03" xsd:dateTime
+property_value: owl:versionInfo "2026-03-31" xsd:string
+

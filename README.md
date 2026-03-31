@@ -2,37 +2,34 @@
 ![Build Status](https://github.com/cmungall/mamo/actions/workflows/qc.yml/badge.svg)
 # Mathematical modeling ontology
 
-Rescue repo for orphaned OBO ontology `mamo`. This is a minimal ODK setup intended to keep MAMO buildable and inspectable for archival, indexing, and mapping work. It does not imply active maintenance.
+This repository is a rescue home for the orphaned ontology `mamo`.
+
+It was created in March 2026 to keep MAMO available in a durable GitHub/ODK repository for archival, indexing, and mapping use.
+
+Chris Mungall (`cmungall`) is providing repository hosting and release automation only. He is not the original author, owner, or scientific maintainer of MAMO.
 
 Description: The Mathematical Modelling Ontology (MAMO) is a classification of the types of mathematical models used mostly in the life sciences, their variables, relationships and other relevant features.
 
-More information can be found at http://obofoundry.org/ontology/mamo
+Original ontology page: http://obofoundry.org/ontology/mamo
 
-## Versions
+## Repository Files
 
-### Stable release versions
-
-The latest version of the ontology can always be found at:
-
-http://purl.obolibrary.org/obo/mamo.owl
-
-(note this will not show up until the request has been approved by obofoundry.org)
-
-### Editors' version
-
-Editors of this ontology should use the edit version, [src/ontology/mamo-edit.owl](src/ontology/mamo-edit.owl)
+- Rescued editable source: `src/ontology/mamo-edit.owl`
+- Main release artefacts committed to this repo: `mamo.owl`, `mamo.obo`
+- Additional derived artefacts: `mamo-full.owl`, `mamo-full.obo`, `mamo-base.owl`, `mamo-base.obo`
+- Preserved rescue snapshot: `src/ontology/upstream/mamo-2026-03-31.owl`
 
 ## Provenance
 
-- Edit file: `src/ontology/mamo-edit.owl`
-- Preserved rescued source snapshot: `src/ontology/upstream/mamo-2026-03-31.owl`
 - Seeded on 2026-03-31 from `https://svn.code.sf.net/p/mamo-ontology/code/tags/latest/mamo-xml.owl`
 - The edit file remains in OWL because the recoverable upstream source is OWL
 - Upstream homepage: `http://sourceforge.net/p/mamo-ontology/wiki/Home/`
 
-## Contact
+## Reporting Problems
 
-Please use this GitHub repository's [issue tracker](https://github.com/cmungall/mamo/issues) for repository and preservation work.
+Please use this GitHub repository's [issue tracker](https://github.com/cmungall/mamo/issues) for problems with the rescue repo, the committed release artefacts, or provenance.
+
+This tracker is not a claim of scientific ownership or governance over MAMO.
 
 ## Acknowledgements
 

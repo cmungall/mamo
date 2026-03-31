@@ -24,7 +24,9 @@ license:
 activity_status: orphaned
 ---
 
-This repository preserves MAMO in a minimal ODK setup for archival, indexing, and mapping work.
+This is a rescue/preservation repository created in 2026 to keep MAMO available in a durable GitHub/ODK home.
+
+Chris Mungall provides repository hosting only and is not claiming original ownership or active scientific stewardship of MAMO.
 
 The edit file was seeded from `https://svn.code.sf.net/p/mamo-ontology/code/tags/latest/mamo-xml.owl` on 2026-03-31 and kept in OWL because that is the recoverable upstream source format.
 The rescued source snapshot is preserved at `src/ontology/upstream/mamo-2026-03-31.owl`.
