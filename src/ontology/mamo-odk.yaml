@@ -1,0 +1,12 @@
+id: mamo
+title: Mathematical modeling ontology
+github_org: cmungall
+repo: mamo
+edit_format: owl
+git_main_branch: main
+description: The Mathematical Modelling Ontology (MAMO) is a classification of the types of mathematical models used mostly in the life sciences, their variables, relationships and other relevant features.
+license: http://opensource.org/licenses/Artistic-2.0
+release_use_reasoner: false
+release_artefacts:
+  - full
+  - base

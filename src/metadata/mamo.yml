@@ -1,0 +1,28 @@
+# PURL configuration for http://purl.obolibrary.org/obo/mamo
+
+idspace: MAMO
+base_url: /obo/mamo
+
+products:
+- mamo.owl: https://raw.githubusercontent.com/cmungall/mamo/main/mamo.owl
+- mamo.obo: https://raw.githubusercontent.com/cmungall/mamo/main/mamo.obo
+
+term_browser: ontobee
+example_terms:
+- MAMO_0000000
+
+entries:
+
+- prefix: /releases/
+  replacement: https://raw.githubusercontent.com/cmungall/mamo/v
+
+- prefix: /tracker/
+  replacement: https://github.com/cmungall/mamo/issues
+
+- prefix: /about/
+  replacement: http://www.ontobee.org/ontology/MAMO?iri=http://purl.obolibrary.org/obo/
+
+## generic fall-through, serve direct from github by default
+- prefix: /
+  replacement: https://raw.githubusercontent.com/cmungall/mamo/main/
+

@@ -1,0 +1,29 @@
+
+![Build Status](https://github.com/cmungall/mamo/actions/workflows/qc.yml/badge.svg)
+# Mathematical modeling ontology
+
+Description: The Mathematical Modelling Ontology (MAMO) is a classification of the types of mathematical models used mostly in the life sciences, their variables, relationships and other relevant features.
+
+More information can be found at http://obofoundry.org/ontology/mamo
+
+## Versions
+
+### Stable release versions
+
+The latest version of the ontology can always be found at:
+
+http://purl.obolibrary.org/obo/mamo.owl
+
+(note this will not show up until the request has been approved by obofoundry.org)
+
+### Editors' version
+
+Editors of this ontology should use the edit version, [src/ontology/mamo-edit.owl](src/ontology/mamo-edit.owl)
+
+## Contact
+
+Please use this GitHub repository's [Issue tracker](https://github.com/cmungall/mamo/issues) to request new terms/classes or report errors or specific concerns related to the ontology.
+
+## Acknowledgements
+
+This ontology repository was created using the [Ontology Development Kit (ODK)](https://github.com/INCATools/ontology-development-kit).
