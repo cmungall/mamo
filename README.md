@@ -8,6 +8,8 @@ It was created in March 2026 to keep MAMO available in a durable GitHub/ODK repo
 
 Chris Mungall (`cmungall`) is providing repository hosting and release automation only. He is not the original author, owner, or scientific maintainer of MAMO.
 
+Parent OBO Foundry tracking issue: [OBOFoundry/OBOFoundry.github.io#2881](https://github.com/OBOFoundry/OBOFoundry.github.io/issues/2881)
+
 Description: The Mathematical Modelling Ontology (MAMO) is a classification of the types of mathematical models used mostly in the life sciences, their variables, relationships and other relevant features.
 
 Original ontology page: http://obofoundry.org/ontology/mamo
